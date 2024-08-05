@@ -1,0 +1,83 @@
+/* antd样式覆盖 */
+.ant-dropdown {
+  z-index: 2001;
+}
+
+.ant-notification {
+  .ant-notification-notice-wrapper {
+    .ant-notification-notice {
+      min-width: 460px;
+      padding: 10px 24px;
+      background-color: rgb(0, 0, 0, 0.9);
+      border-radius: 6px;
+      .ant-notification-notice-content {
+        .ant-notification-notice-with-icon {
+          .anticon-check-circle,
+          .anticon,
+          .anticon-close-circle {
+            font-size: 30px;
+            top: 40%;
+            transform: translateY(-50%);
+          }
+          .ant-notification-notice-message,
+          .ant-notification-notice-description {
+            font-size: 28px;
+            padding-left: 20px;
+          }
+        }
+      }
+      //成功状态的颜色
+      &.ant-notification-notice-success {
+        // .ant-notification-notice-content {
+        //   .ant-notification-notice-with-icon {
+        .ant-notification-notice-message,
+        .ant-notification-notice-description {
+          color: #34bb45;
+        }
+        //   }
+        // }
+      }
+      &.ant-notification-notice-error {
+        .ant-notification-notice-message,
+        .ant-notification-notice-description {
+          color: #c90503;
+        }
+      }
+      &.ant-notification-notice-warning {
+        .ant-notification-notice-message,
+        .ant-notification-notice-description {
+          color: #c88c18;
+        }
+      }
+
+      .ant-notification-notice-close {
+        top: 45%;
+        transform: translateY(-50%);
+        font-size: 28px;
+        color: #ffffff;
+      }
+    }
+
+    .notification {
+    }
+  }
+}
+
+.ant-modal-content {
+  background-color: #000 !important;
+  border: 1px solid #fff !important;
+  padding: 0px !important;
+  border-radius: 18px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 800px;
+  right: 150px;
+  position: relative !important;
+  @media screen and (max-width: 970px) {
+    width: calc(100vw - 56px);
+  }
+}
+
+/* antd样式覆盖 -end of- */

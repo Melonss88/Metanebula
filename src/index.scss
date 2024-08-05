@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(@/assets/commonCss/common.antd.scss);
+
+html {
+  font-size: 10px;
+  background-color: #000;
+}
+:root {
+  font-family: Consolas, Monaco, monospace;
+  line-height: 1.5;
+  color-scheme: light dark;
+  color: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+}
+button {
+  outline: none;
+  box-shadow: none;
+}
+h1 {
+  margin: 0;
+}
+
+/* 公共样式 public */
+.w-default {
+  max-width: 1200px;
+  min-width: 350px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 970px) {
+    padding: 0 16px;
+  }
+}
+.to-top {
+  padding-top: 104px;
+  @media screen and (max-width: 970px) {
+    padding-top: 64px;
+  }
+}
+.bg-common {
+  // background-color: #658adb;
+  background: #000;
+}
+.bg-gradient {
+  background: linear-gradient(to left, #ffa801, #ff7900);
+}
+
+.header-dropdown-li {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  min-width: 20rem;
+  padding: 0 10px;
+  &.dropdown-li-w {
+    min-width: 100%;
+  }
+  &:hover .share {
+    display: inline-block;
+  }
+  .share {
+    display: none;
+  }
+  .user-left {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 12px;
+    }
+  }
+}
+.btn-theme-yellow {
+  background: linear-gradient(to right, #ffa801, #ff7900);
+  box-shadow: 0 20px 30px rgb(255 121 0/ 30%);
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  @media screen and (max-width: 970px) {
+    box-shadow: 0 10px 15px rgb(255 121 0/ 30%);
+  }
+}
+.text-gradient {
+  background: linear-gradient(to bottom, #ffa801, #ff7900);
+  box-shadow: 5px 30px 50px rgb(255 121 0/ 20%);
+  // background: linear-gradient(to bottom, #cae6f3, #2c93c5);
+  // box-shadow: 10px 20px 40px rgb(202 230 243 / 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+/* end of public scss */
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background-color: #737373;
+  border-radius: 12px;
+}

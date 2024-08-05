@@ -1,0 +1,222 @@
+// 你猜是不是大bg上面左右那两个非显示不可的图片呢
+.market-bg-x {
+  background-repeat: no-repeat;
+  &.market-bg-xl {
+    // background-image: url("../img/market-bg1.webp");
+    // background-position: top right;
+  }
+  &.market-bg-xr {
+    // background-image: url("../img/market-bg2.webp");
+    // background-position: top left;
+  }
+  @media screen and (max-width: 970px) {
+    width: 14px;
+    height: calc(100vh - 128px);
+    background-size: cover;
+  }
+  @media screen and (min-width: 970px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+    flex: 1;
+    min-width: 115px;
+    min-height: 805px;
+  }
+}
+
+.content-border {
+  padding: 0 40px;
+  &.defi {
+    padding: 0 32px;
+  }
+  @media screen and (max-width: 970px) {
+    padding: 0;
+    &.defi {
+      padding: 0 20px;
+    }
+  }
+}
+
+// 就是那根-----长长的分割线呗
+.bar-breakup {
+  height: 2px;
+  width: 100%;
+  background: #6d6d6d;
+  margin: 18px auto;
+  @media screen and (max-width: 970px) {
+    margin: 9px auto;
+  }
+}
+// 还有一个图的line再filter和详情里面
+.bar-line {
+  background-image: url("../img/line.webp");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 9rem cover;
+}
+// card里面虚线的点点
+.bar-dotted {
+  padding: 6px;
+  background-image: radial-gradient(circle, black 4px, transparent 1px);
+  background-size: 10px;
+  background-position: -5px;
+  @media screen and (max-width: 970px) {
+    background-image: radial-gradient(circle, black 3px, transparent 1px);
+    background-size: 8px;
+  }
+}
+
+// 作为公共的颜色，details里面还要用
+.Common {
+  color: #01ff2b;
+}
+.Uncommon {
+  color: #0190ff;
+}
+.Rare {
+  color: #e401ff;
+}
+.Epic {
+  color: #ffea01;
+}
+.Legendary {
+  color: #ff0101;
+}
+//
+
+// nft卡片那块的信息
+.nft-info {
+  display: flex;
+  margin: 15px 0;
+  justify-content: space-between;
+  .num {
+    font-size: 2.5rem;
+    color: #ffffff;
+    line-height: 2em;
+  }
+  .select {
+    min-width: 20rem;
+    height: 4.2rem;
+    background: transparent;
+    border-radius: 2rem;
+    border: 1px solid #ffffff;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #fff;
+    &:hover {
+      background: inherit;
+    }
+  }
+  .ant-btn {
+    font-weight: 400;
+  }
+
+  @media screen and (max-width: 970px) {
+    align-items: center;
+    .num {
+      font-size: 1.2rem;
+    }
+    .select {
+      font-size: 1.3rem;
+      min-width: 11.8rem;
+      min-height: 2.5rem;
+      height: 3.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.productlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: center;
+  width: 100%;
+  row-gap: 20px;
+  column-gap: 30px;
+  &.defi {
+    row-gap: 30px;
+    column-gap: 24px;
+    width: 100%;
+    padding: 0 12px 0 0;
+  }
+  @media screen and (max-width: 970px) {
+    &.defi {
+      row-gap: 14px;
+      column-gap: 12px;
+      padding: 0;
+    }
+  }
+  .item {
+    width: 20rem;
+    min-height: 23.5rem;
+    max-height: 29rem;
+    border-radius: 18px;
+    color: #000;
+    background: #eae7e3;
+    border: 1px solid #000;
+    &.Common {
+      background: linear-gradient(135deg, #347254 0%, #6bae79 100%);
+    }
+    &.Uncommon {
+      background: linear-gradient(135deg, #454bd6 0%, #6fb9ef 100%);
+    }
+    &.Rare {
+      background: linear-gradient(135deg, #5c28d2 0%, #ad6ac4 100%);
+    }
+    &.Epic {
+      background: linear-gradient(135deg, #ff7900 0%, #fed904 100%);
+    }
+    &.Legendary {
+      background: linear-gradient(135deg, #ab0000 0%, #ff5a44 100%);
+    }
+    .avatar {
+      padding: 8px;
+      img {
+        width: 100%;
+        height: 19rem;
+        border-radius: 10px;
+      }
+    }
+    .cont {
+      .lable2 {
+        font-weight: normal;
+        font-size: 2.2rem;
+        color: #e8e8e8;
+        line-height: 4.6rem;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        .star {
+          width: 2.3rem;
+          height: 2.3rem;
+          margin: 0px 5px 5px 0;
+        }
+      }
+    }
+    &.defi-item {
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 970px) {
+    grid-template-columns: repeat(auto-fill, 30%);
+    column-gap: 12px;
+    .item {
+      width: 10.2rem;
+      min-height: 12.2rem;
+      border-radius: 8px;
+      .avatar {
+        padding: 4px;
+        img {
+          height: 100px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+// -- end of -- nft卡片那块的信息

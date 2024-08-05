@@ -1,0 +1,83 @@
+// banner的海浪效果
+.banner-container {
+  position: relative;
+  align-items: center;
+  min-height: 500px;
+  background-color: #57bdee;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    min-width: 300vw;
+    min-height: 300vw;
+    background-color: #fff;
+    // background-color: #f9dd8d;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  &:before {
+    bottom: 15vh;
+    border-radius: 45%;
+    animation-duration: 10s;
+  }
+
+  &:after {
+    bottom: 12vh;
+    opacity: 0.5;
+    border-radius: 47%;
+    animation-duration: 10s;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, 0) rotateZ(0deg);
+  }
+  50% {
+    transform: translate(-50%, -2%) rotateZ(180deg);
+  }
+  100% {
+    transform: translate(-50%, 0%) rotateZ(360deg);
+  }
+}
+
+// banner里面的文字效果
+.home-welcome {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font:
+    bold 350% Consolas,
+    Monaco,
+    monospace;
+  border-right: 0.1em solid;
+  width: 40ch;
+  margin: 40px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typing 3s steps(40, end),
+    cursor-blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40ch;
+  }
+}
+
+@keyframes cursor-blink {
+  50% {
+    border-color: transparent;
+  }
+}

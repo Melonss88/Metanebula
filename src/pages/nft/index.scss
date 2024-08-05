@@ -1,0 +1,247 @@
+@import url("../../assets/commonCss/common.nft.scss");
+.tab-li {
+  border: 1px solid #585d70;
+  border-radius: 1rem;
+  padding: 8px 40px;
+  display: flex;
+  background: #000000;
+  box-shadow: 0 0 40px rgb(40, 1, 127, 0.3);
+  li {
+    background: #0e0b1b;
+    font-size: 30px;
+    color: #636363;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0e0b1b;
+    border-radius: 6px;
+    width: 195px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    cursor: pointer;
+    &:first-child {
+      margin-right: 18px;
+    }
+    &.active {
+      color: #ffffff;
+      background: #1a1636;
+      border-color: #322c5c;
+    }
+    a {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      color: inherit;
+      &:hover {
+        color: none;
+      }
+    }
+
+    @media screen and (max-width: 970px) {
+      font-size: 18px;
+      width: 107px;
+      height: 34px;
+      line-height: 32px;
+    }
+  }
+}
+
+// 以下是原项目搬运样式
+.nftMarket {
+  .btn-container {
+    button {
+      border-radius: 15px;
+      width: 248px;
+      height: 6.6rem;
+      position: relative;
+      overflow: hidden;
+      font-size: 2.2rem;
+      &.button1 {
+        background: linear-gradient(0deg, #874cd2 0%, #2871fa 95%);
+      }
+      &.button2 {
+        background: linear-gradient(0deg, #48c6ef 0%, #6f86d6 95%);
+      }
+      @media screen and (max-width: 970px) {
+        width: 9.8rem;
+        height: 2.8rem;
+        border-radius: 6px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    .types {
+      .item {
+        min-width: 14.8rem;
+        height: 4.5rem;
+        border-radius: 2.2rem;
+        margin-right: 1.2rem;
+        border: 1px solid #fff;
+        background: transparent;
+        font-weight: 400;
+        font-size: 2.2rem;
+        color: #7d7d7d;
+        cursor: pointer;
+        line-height: 2em;
+        &.active {
+          color: #ffffff;
+          background: #333333;
+        }
+      }
+    }
+    .show_fiter {
+      width: 12rem;
+      height: 3.6rem;
+      background: #333;
+      border-radius: 18px;
+      border: 0px solid #000000;
+      font-weight: 400;
+      font-size: 2.4rem;
+      color: #ffffff;
+      padding: 2px 16px;
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 970px) {
+      display: block;
+      .types {
+        .item {
+          font-size: 1.6rem;
+          min-width: 10.8rem;
+          height: 3.2rem;
+          margin-bottom: 8px;
+        }
+      }
+      .show_fiter {
+        font-size: 1.6rem;
+        padding: 2px 10px;
+        width: 8rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
+  .line {
+    width: 100%;
+    height: 5.2rem;
+  }
+}
+
+.condition {
+  font-size: 1.6rem;
+  color: #ffffff;
+  .lab {
+    width: 120px;
+    padding-right: 15px;
+  }
+  &-item {
+    display: flex;
+    .condition-right {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .inputBox {
+      margin-bottom: 2.5rem;
+      // margin-right: 2.5rem;
+      width: 160px;
+      display: flex;
+      align-items: center;
+    }
+    .All .inputBox {
+      width: 120px;
+    }
+  }
+  &-price {
+    display: flex;
+    .lab {
+      width: 180px;
+    }
+    .line {
+      display: inline-block;
+      width: 55px;
+      height: 2px;
+      margin: 3px 8px;
+      background: #6d6d6d;
+    }
+    input {
+      background: #000000;
+      border-radius: 13px;
+      border: 1px solid #ffffff;
+      width: 100px;
+      height: 28px;
+      font-size: 18px;
+      color: #fff;
+      text-align: center;
+      &::placeholder {
+        color: #7d7d7d;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 970px) {
+    font-size: 1.1rem;
+    .lab {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &-item {
+      display: block;
+      .inputBox {
+        width: 100px;
+      }
+      .All .inputBox {
+        width: 100px;
+      }
+    }
+    &-price {
+      display: block;
+      input {
+        width: 68px;
+        height: 20px;
+        font-size: 13px;
+        border-radius: 6px;
+        border: 1px solid #7d7d7d;
+      }
+    }
+  }
+}
+.ant-drawer {
+  .ant-drawer-content-wrapper {
+    width: 100% !important;
+    .ant-drawer-content {
+      width: 80% !important;
+      top: 40% !important;
+      right: 0 !important;
+      position: absolute;
+      border-radius: 8px 0 0 0;
+      border-style: solid;
+      border-color: #fff;
+      border-width: 1px 0 0 1px;
+    }
+  }
+  .ant-drawer-body {
+    padding: 10px 18px;
+    background: #000;
+  }
+}
+
+.ant-progress-text {
+  font-weight: normal !important;
+  font-size: 2.5rem !important;
+  color: #ffffff !important;
+  text-align: right !important;
+  font-style: normal !important;
+  text-transform: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
