@@ -28,12 +28,11 @@ const Mint = () => {
       });
     }
     try {
-      // open({ view: "Networks" });
       writeContract({
-        address: "0x05Aa229Aec102f78CE0E852A812a388F076Aa555",
+        address: "0x8438Ad1C834623CfF278AB6829a248E37C2D7E3f",
         abi: DUCK,
         functionName: "safeMint",
-        args: ["0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266", "ipfs"]
+        args: [address, "testMint"]
       });
     } catch (error) {
       notification.error({

@@ -1,6 +1,6 @@
 # Metanebula
 
-gd of melon
+gp of melon
 
 # React + TypeScript + Vite
 

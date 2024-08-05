@@ -1,6 +1,6 @@
 import { createWeb3Modal } from "@web3modal/wagmi/react";
 import { defaultWagmiConfig } from "@web3modal/wagmi/react/config";
-import { sepolia, arbitrumSepolia, hardhat } from "wagmi/chains";
+import { hardhat } from "wagmi/chains";
 import { QueryClient } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
@@ -10,11 +10,11 @@ const projectId = "a00f249462f72576ba6637891f6d932c";
 const metadata = {
   name: "GP_Melon",
   description: "Melon's Graduation Design",
-  url: "http://localhost:5173", // origin must match your domain & subdomain
+  url: "http://localhost:5173",
   icons: ["https://avatars.githubusercontent.com/u/37784886"]
 };
 
-const chains = [sepolia, arbitrumSepolia, hardhat] as const;
+const chains = [hardhat] as const;
 
 const wagmiConfig = defaultWagmiConfig({
   chains,
