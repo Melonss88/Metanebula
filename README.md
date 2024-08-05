@@ -11,8 +11,10 @@ This template provides a minimal setup to get React working in Vite with HMR and
 git clone https://github.com/Melonss88/Metanebula.git
 cd Metanebula
 npm i / cnpm i (recommend)
-
-# Usage
 ```
 
+# Usage
+
+```
 npm run dev
+```
