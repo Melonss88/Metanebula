@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import ETHxCAT from "./ethxcat/Index";
+import ETHxCAT from "./section/Index";
 
 type nftHeaderListType = "Duck";
 export interface NftHeaderProviderType {

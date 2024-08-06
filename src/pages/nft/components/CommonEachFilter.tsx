@@ -1,9 +1,9 @@
 import React from "react";
-import { generationType, rarityType, skillType } from "../ethxcat/type";
+import { nameType, rarityType, skillType } from "../section/type";
 import CheckboxItem from "./CheckboxItem";
 import classNames from "classnames";
 
-type ValueType = generationType | rarityType | skillType;
+type ValueType = nameType | rarityType | skillType;
 
 type EachFilterInterface<T> = {
   filterArray: T[];

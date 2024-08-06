@@ -1,7 +1,6 @@
-import { skillType, breedType, rarityType, generationType } from "./type";
+import { skillType, breedType, rarityType, nameType } from "./type";
 import { EthxCatContext } from "./EthxCatContext";
 import { useState } from "react";
-import { EthxCats } from "./type";
 import EthxCatFilter from "./EthxCatFilter";
 import NftHeader from "../components/NftHeader";
 import EthxCatItems from "./EthxCatItems";
@@ -10,7 +9,7 @@ import { useDebounce } from "use-debounce";
 const ETHxCAT = () => {
   const [skill, setSkill] = useState<skillType>("All");
   const [rarity, setRarity] = useState<rarityType>("All");
-  const [generation, setGeneration] = useState<generationType>("All");
+  const [name, setName] = useState<nameType>("All");
   const [breed, setBreed] = useState<breedType>("All");
   const [minValue, setMinValue] = useState<string>("");
   const [maxValue, setMaxValue] = useState<string>("");
@@ -20,8 +19,8 @@ const ETHxCAT = () => {
   return (
     <EthxCatContext.Provider
       value={{
-        generation,
-        setGeneration,
+        name,
+        setName,
         skill,
         setSkill,
         rarity,
@@ -38,7 +37,7 @@ const ETHxCAT = () => {
         <NftHeader />
         <EthxCatFilter />
 
-        <EthxCatItems items={EthxCats} />
+        <EthxCatItems />
       </section>
     </EthxCatContext.Provider>
   );

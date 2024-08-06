@@ -4,11 +4,10 @@ import logoImg from "@/pages/fixed/images/logo.jpg";
 import CommunityItems from "./components/DropList";
 import { Dropdown } from "antd";
 import mobileStore from "@/stores/mobileStore";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { observer } from "mobx-react";
 import User from "./components/User";
 
-const ethxcatURL = import.meta.env.VITE_APP_URL_ETHXCAT;
 const Header = () => {
   const [showList, setShowList] = useState(false);
   const [isDropdown, setIsDropdown] = useState(false);

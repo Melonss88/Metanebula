@@ -1,14 +1,13 @@
 import { Dropdown, MenuProps } from "antd";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
-import { useAccount, useDisconnect } from "wagmi";
+import { useAccount, useDisconnect, useSignMessage } from "wagmi";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router";
+import { useEffect } from "react";
 
 const User = () => {
   const { open, close } = useWeb3Modal();
-  const { address } = useAccount();
+  const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
-  const navigate = useNavigate();
 
   const assetsItems: MenuProps["items"] = [
     {

@@ -1,4 +1,4 @@
-export type generationType = "All" | "duck";
+export type nameType = "All" | "duck";
 export type rarityType =
   | "All"
   | "Common"
@@ -8,7 +8,8 @@ export type rarityType =
   | "Legendary";
 
 export type AssetsItemType = {
-  id: string;
+  tokenId: string;
+  to: string;
+  name: nameType;
   rarity: rarityType | "Default";
-  generation: generationType;
 };

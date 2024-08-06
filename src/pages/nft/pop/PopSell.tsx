@@ -1,6 +1,6 @@
 import "@/assets/commonCss/common.pop.scss";
 import CloseSvg from "@/assets/svg/CloseSvg";
-import avatar from "../../img/avatar.jpg";
+import avatar from "../img/avatar.jpg";
 const PopSell = ({ onClose }: { onClose: () => void }) => {
   return (
     <div className="pop-container">

@@ -7,7 +7,7 @@ import DetailBack from "../components/DetailBack";
 import NFTTitle from "../components/NFTTitle";
 import { useSearchParams } from "react-router-dom";
 import SaleHistory from "./SaleHistory";
-import PopSell from "../ethxcat/pop/PopSell";
+import PopSell from "../pop/PopSell";
 import ETHSvg from "@/assets/svg/ETHSvg";
 
 const EthxCatDetail = () => {

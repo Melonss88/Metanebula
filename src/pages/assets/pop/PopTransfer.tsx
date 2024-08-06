@@ -5,7 +5,7 @@ import DUCK from "@/config/abi/DUCK.json";
 import { notification } from "antd";
 import { useWriteContract } from "wagmi";
 
-const PopSell = ({
+const PopTransfer = ({
   id,
   onClose
 }: {
@@ -98,4 +98,4 @@ const PopSell = ({
   );
 };
 
-export default PopSell;
+export default PopTransfer;
