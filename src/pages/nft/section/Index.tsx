@@ -1,4 +1,4 @@
-import { skillType, breedType, rarityType, nameType } from "./type";
+import { rarityType, nameType } from "./type";
 import { EthxCatContext } from "./EthxCatContext";
 import { useState } from "react";
 import EthxCatFilter from "./EthxCatFilter";
@@ -7,10 +7,8 @@ import EthxCatItems from "./EthxCatItems";
 import { useDebounce } from "use-debounce";
 
 const ETHxCAT = () => {
-  const [skill, setSkill] = useState<skillType>("All");
   const [rarity, setRarity] = useState<rarityType>("All");
   const [name, setName] = useState<nameType>("All");
-  const [breed, setBreed] = useState<breedType>("All");
   const [minValue, setMinValue] = useState<string>("");
   const [maxValue, setMaxValue] = useState<string>("");
   const [debouncedMinValue] = useDebounce(minValue, 1000);
@@ -21,12 +19,8 @@ const ETHxCAT = () => {
       value={{
         name,
         setName,
-        skill,
-        setSkill,
         rarity,
         setRarity,
-        breed,
-        setBreed,
         maxValue,
         minValue,
         setMaxValue,

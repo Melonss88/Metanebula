@@ -1,15 +1,12 @@
-export type nameType = "All" | "duck";
-export type rarityType =
-  | "All"
-  | "Common"
-  | "Uncommon"
-  | "Rare"
-  | "Epic"
-  | "Legendary";
-
-export type AssetsItemType = {
+export type rarityType = "All" | "1" | "2" | "3" | "4" | "5";
+export interface AssetsItemType {
   tokenId: string;
   to: string;
-  name: nameType;
+  name: string;
   rarity: rarityType | "Default";
-};
+  imageURL: string;
+  color: string;
+  gender: string;
+  price: string;
+  accessories: string;
+}

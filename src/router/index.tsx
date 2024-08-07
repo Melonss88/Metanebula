@@ -4,9 +4,9 @@ import { useAccount } from "wagmi";
 
 const Home = lazy(() => import("@/pages/home/Index"));
 const NFT = lazy(() => import("@/pages/nft/Index"));
-const NFTDetail = lazy(() => import("@/pages/nft/detail/EthxCatDetail"));
+const NFTDetail = lazy(() => import("@/pages/nftDetail/EthxCatDetail"));
 const MyAssets = lazy(() => import("@/pages/assets/Index"));
-const AssetsDetail = lazy(() => import("@/pages/assets/detail/AssetsDetail"));
+const AssetsDetail = lazy(() => import("@/pages/assetsDetail/AssetsDetail"));
 const Mint = lazy(() => import("@/pages/mint/Index"));
 
 function RootRoute(): JSX.Element {

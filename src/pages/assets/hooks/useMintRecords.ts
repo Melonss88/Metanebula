@@ -9,7 +9,7 @@ export const useMintRecords = () => {
   useEffect(() => {
     const getMintRecords = async () => {
       try {
-        const response = await axiosInstance.get("/mint-records");
+        const response = await axiosInstance.get("/mint/records");
         setRecords(response.data);
       } catch (error) {
         console.error("Error fetching mint records:", error);

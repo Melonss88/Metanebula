@@ -1,5 +1,5 @@
 import { accountFormat } from "@/utils/web3utils";
-import { useTransferRecords } from "../hooks/useTransferRecords";
+import { useTransferRecords } from "../assets/hooks/useTransferRecords";
 import { formatTimestamp } from "@/utils/formatDate";
 
 const SaleHistory = () => {

@@ -111,7 +111,7 @@ const Header = () => {
             )}
           </div>
           {showList && (
-            <div className="header-link big:flex h-full font-santral">
+            <div className="header-link big:flex h-full">
               <ul className="header-route big:flex items-center ">
                 <li>
                   <Link to="/">Home</Link>

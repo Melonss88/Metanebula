@@ -2,23 +2,14 @@ import mobileStore from "@/stores/mobileStore";
 import { observer } from "mobx-react";
 import { useEthxCat } from "./EthxCatContext";
 import { CloseOutlined } from "@ant-design/icons";
-import { breedType, nameType, rarityType, skillType } from "./type";
+import { nameType, rarityType } from "./type";
 import { Drawer } from "antd";
 import { useNftHeaderContext } from "../NFT";
 import CommonEachFilter from "../components/CommonEachFilter";
 import PriceMinMax from "../components/PriceMinMax";
 
 const Name: nameType[] = ["All", "duck"];
-const Rarity: rarityType[] = [
-  "All",
-  "Common",
-  "Uncommon",
-  "Rare",
-  "Epic",
-  "Legendary"
-];
-const Skill: skillType[] = ["All", "1", "2", "3", "4"];
-const Breed: breedType[] = ["All", "7", "6", "5", "4", "3", "2", "1", "0"];
+const Rarity: rarityType[] = ["All", "1", "2", "3", "4", "5"];
 
 const EthxCatFilter = () => {
   const {

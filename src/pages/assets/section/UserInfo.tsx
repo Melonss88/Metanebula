@@ -20,7 +20,7 @@ const UserInfo = () => {
         ></path>
       </svg>
       <p className="text-[24px] mt-[10px] small:text-[13px]">Welcome</p>
-      <p className="text-[22px] font-[BroR] small:text-[12px]">{newAddress}</p>
+      <p className="text-[22px] small:text-[12px]">{newAddress}</p>
     </section>
   );
 };

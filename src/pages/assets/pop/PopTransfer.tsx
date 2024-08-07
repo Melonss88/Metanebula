@@ -89,7 +89,7 @@ const PopTransfer = ({
           Confirm
         </button>
         <p className="text-red-500">{remind}</p>
-        <p className="mt-[20px] text-[2rem] font-[BroR] small:text-[10px]">
+        <p className="mt-[20px] text-[2rem] small:text-[10px]">
           Please be aware that assets transferred to the wrong address can't be
           recovered
         </p>

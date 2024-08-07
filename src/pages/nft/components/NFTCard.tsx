@@ -1,6 +1,4 @@
-import Nodata from "@/pages/components/Nodata";
 import classNames from "classnames";
-import avatar from "../img/avatar.jpg";
 import { useNavigate } from "react-router";
 import { EthxCatItemType } from "@/pages/nft/section/type";
 import { AssetsItemType } from "@/pages/assets/section/type";
@@ -15,7 +13,7 @@ const NFTCard = ({
   const navigate = useNavigate();
 
   return (
-    <div className="productlist overflow-auto max-h-[700px] font-[BroR]">
+    <div className="productlist overflow-auto max-h-[700px]">
       {items.map((eachItem, index) => {
         return (
           <div
@@ -27,7 +25,7 @@ const NFTCard = ({
             key={eachItem.tokenId}
           >
             <div className="avatar">
-              <img src={avatar} alt="avatar.png" />
+              <img src={eachItem.imageURL} alt="avatar.png" />
             </div>
             <div
               className={classNames(
@@ -44,13 +42,13 @@ const NFTCard = ({
             {type == "nft" && "price" in eachItem && (
               <>
                 <p className="flex items-baseline text-[18px] px-[5px] big:px-[15px] font-bold">
-                  <span className="text-[20px] small:text-[12px] font-[BroB] leading-[1.5em]">
+                  <span className="text-[20px] small:text-[12px] leading-[1.5em]">
                     {eachItem.price} ETH
                   </span>
                 </p>
                 <p className="flex items-baseline text-[16px] small:text-[10px] px-[5px] big:px-[15px]">
                   <span>Latest sale: </span>
-                  <span className="big:ml-[4px] font-[BroB] leading-[1.5em]">
+                  <span className="big:ml-[4px] leading-[1.5em]">
                     {eachItem.latestSale} ETH
                   </span>
                 </p>
