@@ -105,7 +105,13 @@ const Countdown: React.FC<CountdownProps> = ({ waitTime, duration }) => {
       {/* 倒计时那块 */}
       <div className="countdown">
         <div
-          className={`timer flex justify-end small:justify-center ${timeLeft.phase === "active" ? "text-[#01FF2B]" : timeLeft.phase === "waiting" ? " text-[#FFA801]" : " text-[#9C9C9C]"}`}
+          className={`timer flex justify-end small:justify-center ${
+            timeLeft.phase === "active"
+              ? "text-[#01FF2B]"
+              : timeLeft.phase === "waiting"
+              ? " text-[#4ab3fd]"
+              : " text-[#9C9C9C]"
+          }`}
         >
           <p className="unit">
             <span className="num">{timeLeft.days}:</span>
@@ -142,7 +148,11 @@ const Countdown: React.FC<CountdownProps> = ({ waitTime, duration }) => {
         </div>
         <div className="mt-[24px] flex justify-end  small:flex-col small:items-center small:justify-center items-end w-full">
           <div
-            className={`small:pt-[4px]  ${timeLeft.phase !== "active" ? "bg-[linear-gradient(90deg,#707070_0%,#4E4E4E_100%)] cursor-not-allowed" : " cursor-pointer bg-[linear-gradient(90deg,#FFA801_0%,#FF7900_100%)]"} ml-[30px] small:ml-0 w-[260px] h-[60px]  text-[30px] small:h-[50px] small:text-[20px] flex  items-center  justify-center rounded-[30px]  `}
+            className={`small:pt-[4px]  ${
+              timeLeft.phase !== "active"
+                ? "bg-[linear-gradient(90deg,#707070_0%,#4E4E4E_100%)] cursor-not-allowed"
+                : " cursor-pointer btn-theme-blue"
+            } ml-[30px] small:ml-0 w-[260px] h-[60px]  text-[30px] small:h-[50px] small:text-[20px] flex  items-center  justify-center rounded-[30px]  `}
           >
             {timeLeft.phase === "waiting" && "MINT"}
             {timeLeft.phase === "active" && <Mint></Mint>}

@@ -1,17 +1,12 @@
 @import url(@/assets/commonCss/common.nft.scss);
 // userinfo的css
 .userinfo-container {
-  background-image: url("./img/myassets-bg.webp");
-  background-repeat: no-repeat;
-  background-position: top left;
   height: 22rem;
   width: 100%;
   text-align: center;
   padding: 25px 10px;
   margin-bottom: 45px;
   @media screen and (max-width: 970px) {
-    background-image: url("./img/myassets-bg-phone.webp");
-    background-size: 97% 100%;
     height: auto;
     margin-bottom: 54px;
     padding: 25px 10px 0 10px;
@@ -45,6 +40,7 @@
     min-width: 30rem;
     height: 4.2rem;
     background: #333;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;

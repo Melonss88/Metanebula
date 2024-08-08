@@ -40,7 +40,7 @@ const EthxCatDetail = () => {
               </div>
             </div>
             <button
-              className="btn-theme-yellow BuyNow btn-inner"
+              className="btn-theme-blue BuyNow btn-inner"
               onClick={() => setIsBuy(true)}
             >
               Buy Now
@@ -61,7 +61,7 @@ const EthxCatDetail = () => {
             ))}
           </ol>
           <div className="details-common">
-            {tab == 0 && <>出售订单</>}
+            {tab == 0 && <>offers order</>}
             {tab == 1 && <SaleHistory />}
           </div>
         </div>

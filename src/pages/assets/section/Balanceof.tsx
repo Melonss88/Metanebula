@@ -1,7 +1,6 @@
 import { observer } from "mobx-react";
 import { useState, useEffect } from "react";
 import mobileStore from "@/stores/mobileStore";
-import arb from "@/assets/svg/img/arb.svg";
 import { useAccount, useReadContract, useBalance } from "wagmi";
 import ARB from "@/config/abi/ARB.json";
 import { parseAbi } from "viem";
@@ -57,7 +56,7 @@ const Balanceof = () => {
   // }, [balanceData, decimalsData, isBalanceError, isDecimalsError]);
 
   return (
-    <section className="balanceof-container flex justify-end big:mt-[3rem] big:mb-[3rem] mt-[23px] mb-[14px]">
+    <section className="balanceof-container flex justify-center big:mt-[1rem] big:mb-[3rem] mt-[23px] mb-[14px]">
       <ul className="balanceof-ul big:float-right flex">
         <li>
           <span>
@@ -77,13 +76,6 @@ const Balanceof = () => {
           </span>
           <span className="ml-[2rem]">{balance || "--"}</span>
         </li>
-        {/* <li className="ml-[4rem]">
-          <span>
-            <img src={arb} alt="arb.png" />
-            ARB
-          </span>
-          <span>{tokenBalance || "--"}</span>
-        </li> */}
       </ul>
     </section>
   );

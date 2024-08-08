@@ -1,6 +1,6 @@
 import "./header.scss";
 import { Link } from "react-router-dom";
-import logoImg from "@/pages/fixed/images/logo.jpg";
+import logoImg from "@/pages/fixed/images/MNB-logo.png";
 import CommunityItems from "./components/DropList";
 import { Dropdown } from "antd";
 import mobileStore from "@/stores/mobileStore";
@@ -31,33 +31,25 @@ const Header = () => {
   }, []);
 
   return (
-    <section className="header-container text-[1.6rem] fixed top-0 left-0 right-0 z-[2000]">
-      {/* 顶部黄条 */}
+    <section className="header-container text-[2.4rem] fixed top-0 left-0 right-0 z-[2000] text-white bg-black">
+      {/* 顶部 */}
       {!mobileStore.isMobile && (
-        <div className="h-[40px] text-right flex bg-gradient">
-          <div className="text-[#000] w-default">
-            <p className="flex justify-end items-center top-link">
-              <a href="/">Graduation Project -- 214A0350池玉冬</a>
-            </p>
+        <div className="w-default">
+          <div className="h-[66px] flex items-center">
+            <img src={logoImg} className="h-[32px]" alt="metanebula.png" />
+            {/* <div className="text-[#000] w-default">
+              <p className="flex justify-end items-center top-link text-white text-[14px] font-[ftn46]">
+                <a href="/">214A0350 池玉冬</a>
+              </p>
+            </div> */}
           </div>
         </div>
       )}
       {/* 导航栏nav */}
-      <div className="h-[64px] bg-common">
+      <div className="h-[84px] bg-[#0c0c0c]">
         <div className="nav-conatiner relative big:flex justify-between w-default h-full items-center">
-          <div className="flex justify-between items-center w-full">
-            <Link
-              to="/"
-              className="block w-[28px] h-[28px] big:h-[52px] big:w-[52px] rounded-[50%] overflow-hidden mt-2 mb-2"
-            >
-              <img
-                src={logoImg}
-                className="w-full h-full align-middle cursor-pointer"
-                alt="xcats"
-              />
-            </Link>
-
-            {mobileStore.isMobile && (
+          {mobileStore.isMobile && (
+            <div className="flex justify-between items-center w-full">
               <div
                 onClick={() => {
                   setShowList(!showList);
@@ -108,11 +100,11 @@ const Header = () => {
                   </svg>
                 )}
               </div>
-            )}
-          </div>
+            </div>
+          )}
           {showList && (
-            <div className="header-link big:flex h-full">
-              <ul className="header-route big:flex items-center ">
+            <div className="header-link big:flex h-full w-full justify-between">
+              <ul className="header-route big:flex items-center">
                 <li>
                   <Link to="/">Home</Link>
                 </li>
@@ -141,7 +133,7 @@ const Header = () => {
                       viewBox="0 0 24 24"
                     >
                       <path
-                        fill="#FFA801"
+                        fill="#fff"
                         d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"
                       />
                     </svg>
@@ -154,11 +146,17 @@ const Header = () => {
                       viewBox="0 0 24 24"
                     >
                       <path
-                        fill="#FFA801"
+                        fill="#fff"
                         d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6z"
                       />
                     </svg>
                   )}
+                </li>
+                <li>
+                  <Link to="/">About me</Link>
+                </li>
+                <li>
+                  <Link to="/">Contact us</Link>
                 </li>
               </ul>
 

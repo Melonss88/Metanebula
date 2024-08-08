@@ -25,17 +25,8 @@
         align-items: center;
       }
       @media screen and (min-width: 970px) {
-        &:before {
-          content: " ";
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 10px;
-          height: 2px;
-          background-color: #ffa801;
-        }
         &:hover {
+          color: #4ab3fd;
           &:after {
             width: calc(100% - 25px);
           }
@@ -47,7 +38,7 @@
           bottom: 1px;
           width: 0;
           height: 2px;
-          background-color: #ffa801;
+          background-color: #4ab3fd;
           transition: width 0.5s ease;
         }
         &:last-child {
@@ -117,6 +108,24 @@
         padding: 12px 48px;
         height: 100%;
       }
+    }
+  }
+}
+
+//导航的偷懒放一起吧
+.footer-ul {
+  li {
+    margin-left: 50px;
+    &:nth-child(3) {
+      min-width: 178px;
+    }
+    &:last-child {
+      p:nth-child(3) {
+        font-size: 20px;
+      }
+    }
+    p {
+      line-height: 50px;
     }
   }
 }

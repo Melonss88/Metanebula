@@ -27,9 +27,7 @@ const PopSell = ({ onClose }: { onClose: () => void }) => {
           type="text"
           placeholder="Selling price(BNB)"
         />
-        <button className="pop-btn-confirm btn-theme-yellow">
-          Confirm Buy
-        </button>
+        <button className="pop-btn-confirm btn-theme-blue">Confirm Buy</button>
         <p className="mt-[20px] text-[2rem] small:text-[10px]">
           After the tramsaction is successful, a 4.5% handing fee will be
           charged

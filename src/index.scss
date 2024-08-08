@@ -5,13 +5,13 @@
 
 html {
   font-size: 10px;
-  background-color: #000;
+  background-color: #fff;
 }
 :root {
-  font-family: ftn45;
+  font-family: ftn35;
   line-height: 1.5;
   color-scheme: light dark;
-  color: #fff;
+  color: #000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -63,7 +63,7 @@ h1 {
   }
 }
 .to-top {
-  padding-top: 104px;
+  padding-top: 150px;
   @media screen and (max-width: 970px) {
     padding-top: 64px;
   }
@@ -73,7 +73,8 @@ h1 {
   background: #000;
 }
 .bg-gradient {
-  background: linear-gradient(to left, #ffa801, #ff7900);
+  // background: linear-gradient(to left, #ffa801, #ff7900);
+  background: #4ab3fd;
 }
 
 .header-dropdown-li {
@@ -101,10 +102,12 @@ h1 {
     }
   }
 }
-.btn-theme-yellow {
-  background: linear-gradient(to right, #ffa801, #ff7900);
-  box-shadow: 0 20px 30px rgb(255 121 0/ 30%);
-  border-radius: 20px;
+.btn-theme-blue {
+  // background: linear-gradient(to right, #ffa801, #ff7900);
+  // box-shadow: 0 20px 30px rgb(255 121 0/ 30%);
+  // border-radius: 20px;
+  background-color: #27a0f8;
+  border-radius: 25px;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -113,10 +116,10 @@ h1 {
   }
 }
 .text-gradient {
-  background: linear-gradient(to bottom, #ffa801, #ff7900);
-  box-shadow: 5px 30px 50px rgb(255 121 0/ 20%);
-  // background: linear-gradient(to bottom, #cae6f3, #2c93c5);
-  // box-shadow: 10px 20px 40px rgb(202 230 243 / 30%);
+  // background: linear-gradient(to bottom, #ffa801, #ff7900);
+  // box-shadow: 5px 30px 50px rgb(255 121 0/ 20%);
+  background: #fff;
+  box-shadow: 5px 20px 50px rgb(255 255 255/ 20%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }

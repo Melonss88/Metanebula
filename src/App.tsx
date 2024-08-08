@@ -19,7 +19,7 @@ function App() {
     <Provider {...stores}>
       <QueryClientProvider client={queryClient}>
         <WagmiProvider config={wagmiConfig}>
-          <div className="bg-black">
+          <div>
             <Header />
             <RootRoute />
             {isHomePage && <Footer />}

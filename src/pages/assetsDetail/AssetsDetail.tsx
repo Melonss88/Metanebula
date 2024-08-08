@@ -30,7 +30,7 @@ const EthxCatDetail = () => {
           </div>
           <div className="btn-click">
             <button
-              className="btn-theme-yellow BuyNow btn-inner"
+              className="btn-theme-blue BuyNow btn-inner"
               onClick={() => setIsTransfer(true)}
             >
               Transfer

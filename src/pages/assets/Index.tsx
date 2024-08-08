@@ -10,11 +10,11 @@ const myAssetsIndex = () => {
       <NFTTitle title="My Assets" />
       <section className="flex items-start">
         <div className="market-bg-x market-bg-xl" />
-        <div className="text-[#fff] w-default">
+        <div className="w-default">
           <div className="content-border">
             <UserInfo />
             <p className="bar-breakup"></p>
-            <Balanceof />
+            {/* <Balanceof /> */}
             <AssetsItems />
           </div>
         </div>

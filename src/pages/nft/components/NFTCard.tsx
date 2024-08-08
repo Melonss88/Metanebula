@@ -19,7 +19,7 @@ const NFTCard = ({
           <div
             className={classNames(
               "item flex flex-col cursor-pointer",
-              eachItem.rarity
+              `Rarity${eachItem.rarity}`
             )}
             onClick={() => navigate(`/${type}/detail?id=${eachItem.tokenId}`)}
             key={eachItem.tokenId}

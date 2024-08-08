@@ -1,2 +1,72 @@
 .home-container {
+  // banner的自定义样式
+  .carousel-container {
+    .react-multiple-carousel__arrow {
+      width: 64px;
+      height: 64px;
+      background-color: #000000;
+      border: solid 1px #4ab3fd;
+      &::before {
+        font-size: 28px;
+        color: #4ab3fd;
+      }
+    }
+  }
+  // popular的卡片样式
+  .popular-card {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-bottom: 15px;
+    &:nth-child(1) {
+      background-image: url("./img/popular1.png");
+    }
+    &:nth-child(2) {
+      background-image: url("./img/popular2.png");
+    }
+    &:nth-child(3) {
+      background-image: url("./img/popular3.png");
+    }
+    &:nth-child(4) {
+      background-image: url("./img/popular4.png");
+    }
+    &:nth-child(5) {
+      background-image: url("./img/popular5.png");
+    }
+    p {
+      padding-left: 20px;
+      padding-right: 16px;
+    }
+  }
+  //nft-studio
+  .nft-studio {
+    background-image: url("./img/bg-studio.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+  }
+}
+
+// banner里面的文字效果
+.home-welcome {
+  justify-content: center;
+  font: bold 250% ftn55;
+  width: 30ch;
+  margin: 40px 0 30px;
+  white-space: nowrap;
+  //   overflow: hidden;
+  animation: typing 3s steps(40, end), cursor-blink 0.5s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40ch;
+  }
+}
+@keyframes cursor-blink {
+  50% {
+    border-color: transparent;
+  }
 }

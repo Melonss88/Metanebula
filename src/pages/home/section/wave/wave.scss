@@ -45,39 +45,3 @@
     transform: translate(-50%, 0%) rotateZ(360deg);
   }
 }
-
-// banner里面的文字效果
-.home-welcome {
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  font:
-    bold 350% Consolas,
-    Monaco,
-    monospace;
-  border-right: 0.1em solid;
-  width: 40ch;
-  margin: 40px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  animation:
-    typing 3s steps(40, end),
-    cursor-blink 0.5s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 40ch;
-  }
-}
-
-@keyframes cursor-blink {
-  50% {
-    border-color: transparent;
-  }
-}

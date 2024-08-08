@@ -85,7 +85,7 @@ const PopTransfer = ({
             setAddress(event.target.value);
           }}
         />
-        <button className="pop-btn-confirm btn-theme-yellow" onClick={transfer}>
+        <button className="pop-btn-confirm btn-theme-blue" onClick={transfer}>
           Confirm
         </button>
         <p className="text-red-500">{remind}</p>

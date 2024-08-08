@@ -68,19 +68,19 @@
 }
 
 // 作为公共的颜色，details里面还要用
-.Common {
+.Rarity1 {
   color: #01ff2b;
 }
-.Uncommon {
+.Rarity2 {
   color: #0190ff;
 }
-.Rare {
+.Rarity3 {
   color: #e401ff;
 }
-.Epic {
+.Rarity4 {
   color: #ffea01;
 }
-.Legendary {
+.Rarity5 {
   color: #ff0101;
 }
 //
@@ -154,22 +154,22 @@
     min-height: 23.5rem;
     max-height: 29rem;
     border-radius: 18px;
-    color: #000;
+    color: #fff;
     background: #eae7e3;
-    border: 1px solid #000;
-    &.Common {
+    border: 1px solid #fff;
+    &.Rarity1 {
       background: linear-gradient(135deg, #347254 0%, #6bae79 100%);
     }
-    &.Uncommon {
+    &.Rarity2 {
       background: linear-gradient(135deg, #454bd6 0%, #6fb9ef 100%);
     }
-    &.Rare {
+    &.Rarity3 {
       background: linear-gradient(135deg, #5c28d2 0%, #ad6ac4 100%);
     }
-    &.Epic {
+    &.Rarity4 {
       background: linear-gradient(135deg, #ff7900 0%, #fed904 100%);
     }
-    &.Legendary {
+    &.Rarity5 {
       background: linear-gradient(135deg, #ab0000 0%, #ff5a44 100%);
     }
     .avatar {
