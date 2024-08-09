@@ -5,9 +5,9 @@ import DUCK from "@/config/abi/DUCK.json";
 import { notification } from "antd";
 import { useWriteContract } from "wagmi";
 import { nftItemType } from "@/pages/nft/section/type";
+import { useAccount } from "wagmi";
 
 const PopDetails = ({
-  id,
   onClose,
   data,
   type
@@ -19,6 +19,7 @@ const PopDetails = ({
 }) => {
   const [address, setAddress] = useState("");
   const [remind, setRemind] = useState("");
+  const { address: myaddress } = useAccount();
   const {
     data: mintData,
     isSuccess,
@@ -29,14 +30,14 @@ const PopDetails = ({
 
   const transfer = () => {
     if (!address) return setRemind("The address can not be empty");
-
+    console.log([myaddress, address, data?.tokenId]);
     try {
       console.log("address:", address);
       writeContract({
         address: "0x057ef64E23666F000b34aE31332854aCBd1c8544",
         abi: DUCK,
         functionName: "nftTransfer",
-        args: [id, address]
+        args: [myaddress, address, data?.tokenId]
         //0x1a986Eb3a891fc39743aF482e24687B708eA2425
         //0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
         //0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
