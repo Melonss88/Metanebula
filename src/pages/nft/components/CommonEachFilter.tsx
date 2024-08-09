@@ -1,9 +1,7 @@
 import React from "react";
-import { nameType, rarityType, skillType } from "../section/type";
+import { ValueType } from "../section/type";
 import CheckboxItem from "./CheckboxItem";
 import classNames from "classnames";
-
-type ValueType = nameType | rarityType | skillType;
 
 type EachFilterInterface<T> = {
   filterArray: T[];
@@ -20,8 +18,9 @@ const CommonEachFilter = <T extends ValueType>({
 }: EachFilterInterface<T>) => {
   return (
     <div className="condition-item">
-      <div className="lab">{title}:</div>
-      <div className="condition-right">
+      <div className="lab text-[24px] font-[ftn45]">{title}</div>
+      <p className="bar-breakup"></p>
+      <div className="condition-right text-[#0c0c0c]">
         {filterArray.map((item, index) => (
           <div className={classNames(item)} key={index}>
             <CheckboxItem

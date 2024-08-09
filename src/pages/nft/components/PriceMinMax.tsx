@@ -11,7 +11,7 @@ const PriceMinMax = ({
   minValue,
   maxValue,
   setMinValue,
-  setMaxValue,
+  setMaxValue
 }: priceMinMaxType) => {
   const handleMinChange = (event: ChangeEvent<HTMLInputElement>) => {
     let value = event.target.value;
@@ -49,20 +49,20 @@ const PriceMinMax = ({
 
     // 确保 max 大于等于当前的 min
     if (parseInt(minValue, 10) > numValue) {
-      setMinValue(value); // 将 min 值调整为当前的 max 值
+      setMinValue(value);
     }
   };
 
   return (
     <div className="condition-price">
-      <div className="lab">Price Range(USDT):</div>
-      <div>
+      <div className="lab text-[24px] font-[ftn45]">Price Range</div>
+      <p className="bar-breakup"></p>
+      <div className="flex items-center">
         <input
           type="number"
           placeholder="Min"
           value={minValue}
           onChange={handleMinChange}
-          // oninput="this.value = this.value.replace(/[^0-9]/g, '');
         />
         <span className="line"></span>
         <input

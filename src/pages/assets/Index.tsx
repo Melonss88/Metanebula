@@ -9,16 +9,13 @@ const myAssetsIndex = () => {
     <div className="to-top bg-xcats assets-container">
       <NFTTitle title="My Assets" />
       <section className="flex items-start">
-        <div className="market-bg-x market-bg-xl" />
         <div className="w-default">
-          <div className="content-border">
+          <div className="">
             <UserInfo />
             <p className="bar-breakup"></p>
-            {/* <Balanceof /> */}
             <AssetsItems />
           </div>
         </div>
-        <div className="market-bg-x market-bg-xr" />
       </section>
     </div>
   );

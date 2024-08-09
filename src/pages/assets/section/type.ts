@@ -3,7 +3,7 @@ export interface AssetsItemType {
   tokenId: string;
   to: string;
   name: string;
-  rarity: rarityType | "Default";
+  rarity: rarityType;
   imageURL: string;
   color: string;
   gender: string;

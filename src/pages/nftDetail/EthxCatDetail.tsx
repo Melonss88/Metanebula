@@ -22,7 +22,6 @@ const EthxCatDetail = () => {
       <NFTTitle title="NFT Marketplace" />
 
       <section className="flex">
-        <div className="market-bg-x market-bg-xl" />
         <div className="w-default px-[30px]">
           <DetailBack linkTo="/nft" />
 
@@ -65,7 +64,6 @@ const EthxCatDetail = () => {
             {tab == 1 && <SaleHistory />}
           </div>
         </div>
-        <div className="market-bg-x market-bg-xr" />
       </section>
 
       {isBuy && <PopSell onClose={() => setIsBuy(false)} />}

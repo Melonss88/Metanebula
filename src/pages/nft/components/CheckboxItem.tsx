@@ -15,9 +15,9 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({
       className="inputBox cursor-pointer small:flex sm:flex-wrap small:items-center  "
       onClick={onClick}
     >
-      <div className="mr-[1rem] rounded-[50%] w-[30px] h-[30px] small:w-[16px] small:h-[16px] small:p-[2px] p-[4px] border border-solid border-[#fff]">
+      <div className="mr-[6px] rounded-[50%] w-[16px] h-[16px] small:w-[16px] small:h-[16px] small:p-[2px] p-[3px] border border-solid border-[#1f1f1f]">
         {isSelected && (
-          <div className="bg-[#1fff1a] rounded-[50%] w-full h-full"></div>
+          <div className="bg-[#27a0f8] rounded-[50%] w-full h-full"></div>
         )}
       </div>
       <span className="inputTXT">{item}</span>

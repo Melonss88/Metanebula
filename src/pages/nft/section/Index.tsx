@@ -27,10 +27,11 @@ const ETHxCAT = () => {
         setMinValue
       }}
     >
-      <section className="content-border nftMarket">
-        <NftHeader />
-        <EthxCatFilter />
-
+      <section className="nftMarket flex">
+        <div className="w-[29rem]">
+          <NftHeader />
+          <EthxCatFilter />
+        </div>
         <EthxCatItems />
       </section>
     </EthxCatContext.Provider>

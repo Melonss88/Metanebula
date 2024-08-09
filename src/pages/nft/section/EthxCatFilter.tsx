@@ -2,51 +2,38 @@ import mobileStore from "@/stores/mobileStore";
 import { observer } from "mobx-react";
 import { useEthxCat } from "./EthxCatContext";
 import { CloseOutlined } from "@ant-design/icons";
-import { nameType, rarityType } from "./type";
 import { Drawer } from "antd";
-import { useNftHeaderContext } from "../NFT";
 import CommonEachFilter from "../components/CommonEachFilter";
 import PriceMinMax from "../components/PriceMinMax";
-
-const Name: nameType[] = ["All", "duck"];
-const Rarity: rarityType[] = ["All", "1", "2", "3", "4", "5"];
+import { useFilterConfig } from "../hooks/useFilterConfig";
 
 const EthxCatFilter = () => {
-  const {
-    setRarity,
-    rarity,
-    setName,
-    name,
-    minValue,
-    maxValue,
-    setMaxValue,
-    setMinValue
-  } = useEthxCat();
-  const { showFilter, setShowFilter } = useNftHeaderContext();
+  const { name, setName, minValue, maxValue, setMaxValue, setMinValue } =
+    useEthxCat();
+
+  const { records } = useFilterConfig();
+  console.log("records", records);
 
   const RepeatDiv = () => {
     return (
       <>
-        <CommonEachFilter
-          filterArray={Name}
-          title="name"
-          value={name}
-          setValue={setName}
-        />
-        <CommonEachFilter
-          filterArray={Rarity}
-          title="Rarity"
-          value={rarity}
-          setValue={setRarity}
-        />
+        {records.map((item, index) => (
+          <CommonEachFilter
+            key={index}
+            filterArray={item.items}
+            title={item.name}
+            value={name}
+            setValue={setName}
+          />
+        ))}
       </>
     );
   };
 
   return (
     <>
-      {showFilter && !mobileStore.isMobile && (
-        <div className="condition bar-line pb-[2rem] mb-[2rem]">
+      {!mobileStore.isMobile && (
+        <div className="condition pb-[2rem] mb-[2rem]">
           <RepeatDiv />
           <PriceMinMax
             minValue={minValue}
@@ -56,17 +43,11 @@ const EthxCatFilter = () => {
           />
         </div>
       )}
-      {showFilter && mobileStore.isMobile && (
+      {mobileStore.isMobile && (
         <>
-          <Drawer
-            open={showFilter}
-            placement="right"
-            onClose={() => setShowFilter(false)}
-            title={null}
-            closable={false}
-          >
+          <Drawer open={true} placement="right" title={null} closable={false}>
             <div className="text-right mb-[10px]">
-              <CloseOutlined onClick={() => setShowFilter(false)} />
+              <CloseOutlined />
             </div>
             <div className="condition">
               <RepeatDiv />

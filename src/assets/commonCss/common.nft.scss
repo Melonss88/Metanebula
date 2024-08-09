@@ -1,51 +1,11 @@
-// 你猜是不是大bg上面左右那两个非显示不可的图片呢
-.market-bg-x {
-  background-repeat: no-repeat;
-  &.market-bg-xl {
-    // background-image: url("../img/market-bg1.webp");
-    // background-position: top right;
-  }
-  &.market-bg-xr {
-    // background-image: url("../img/market-bg2.webp");
-    // background-position: top left;
-  }
-  @media screen and (max-width: 970px) {
-    width: 14px;
-    height: calc(100vh - 128px);
-    background-size: cover;
-  }
-  @media screen and (min-width: 970px) {
-    display: none;
-  }
-  @media screen and (min-width: 1200px) {
-    display: block;
-    flex: 1;
-    min-width: 115px;
-    min-height: 805px;
-  }
-}
-
-.content-border {
-  padding: 0 40px;
-  &.defi {
-    padding: 0 32px;
-  }
-  @media screen and (max-width: 970px) {
-    padding: 0;
-    &.defi {
-      padding: 0 20px;
-    }
-  }
-}
-
 // 就是那根-----长长的分割线呗
 .bar-breakup {
   height: 2px;
   width: 100%;
-  background: #6d6d6d;
-  margin: 18px auto;
+  background: #dddddd;
+  margin: 5px auto 15px;
   @media screen and (max-width: 970px) {
-    margin: 9px auto;
+    margin: 4px auto;
   }
 }
 // 还有一个图的line再filter和详情里面
@@ -69,116 +29,68 @@
 
 // 作为公共的颜色，details里面还要用
 .Rarity1 {
-  color: #01ff2b;
+  color: #004529;
 }
 .Rarity2 {
-  color: #0190ff;
+  color: #002945;
 }
 .Rarity3 {
-  color: #e401ff;
+  color: #3f0045;
 }
 .Rarity4 {
-  color: #ffea01;
+  color: #453900;
 }
 .Rarity5 {
-  color: #ff0101;
+  color: #450007;
+}
+.bg-Rarity1 {
+  background: #004529;
+}
+.bg-Rarity2 {
+  background: #002945;
+}
+.bg-Rarity3 {
+  background: #3f0045;
+}
+.bg-Rarity4 {
+  background: #453900;
+}
+.bg-Rarity5 {
+  background: #450007;
 }
 //
 
-// nft卡片那块的信息
-.nft-info {
-  display: flex;
-  margin: 15px 0;
-  justify-content: space-between;
-  .num {
-    font-size: 2.5rem;
-    color: #ffffff;
-    line-height: 2em;
-  }
-  .select {
-    min-width: 20rem;
-    height: 4.2rem;
-    background: transparent;
-    border-radius: 2rem;
-    border: 1px solid #ffffff;
-    font-weight: 400;
-    font-size: 2rem;
+.productlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  justify-content: center;
+  width: 100%;
+  gap: 30px 20px;
+  .item {
+    width: 280px;
+    border-radius: 20px;
     color: #fff;
-    &:hover {
-      background: inherit;
-    }
-  }
-  .ant-btn {
-    font-weight: 400;
-  }
-
-  @media screen and (max-width: 970px) {
-    align-items: center;
-    .num {
-      font-size: 1.2rem;
-    }
-    .select {
-      font-size: 1.3rem;
-      min-width: 11.8rem;
-      min-height: 2.5rem;
-      height: 3.2rem;
+    background: #323232;
+    background-image: url("../img/nft-duck-bg.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    overflow: hidden;
+    .avatar {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-  }
-}
-
-.productlist {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  justify-content: center;
-  width: 100%;
-  row-gap: 20px;
-  column-gap: 30px;
-  &.defi {
-    row-gap: 30px;
-    column-gap: 24px;
-    width: 100%;
-    padding: 0 12px 0 0;
-  }
-  @media screen and (max-width: 970px) {
-    &.defi {
-      row-gap: 14px;
-      column-gap: 12px;
-      padding: 0;
-    }
-  }
-  .item {
-    width: 20rem;
-    min-height: 23.5rem;
-    max-height: 29rem;
-    border-radius: 18px;
-    color: #fff;
-    background: #eae7e3;
-    border: 1px solid #fff;
-    &.Rarity1 {
-      background: linear-gradient(135deg, #347254 0%, #6bae79 100%);
-    }
-    &.Rarity2 {
-      background: linear-gradient(135deg, #454bd6 0%, #6fb9ef 100%);
-    }
-    &.Rarity3 {
-      background: linear-gradient(135deg, #5c28d2 0%, #ad6ac4 100%);
-    }
-    &.Rarity4 {
-      background: linear-gradient(135deg, #ff7900 0%, #fed904 100%);
-    }
-    &.Rarity5 {
-      background: linear-gradient(135deg, #ab0000 0%, #ff5a44 100%);
-    }
-    .avatar {
-      padding: 8px;
+      height: 276px;
       img {
-        width: 100%;
-        height: 19rem;
-        border-radius: 10px;
+        max-height: 166px;
       }
+    }
+    .nft-content {
+      background-image: url("../img/light.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      padding: 16px 20px;
     }
     .cont {
       .lable2 {
@@ -195,9 +107,6 @@
           margin: 0px 5px 5px 0;
         }
       }
-    }
-    &.defi-item {
-      height: 100%;
     }
   }
 

@@ -21,7 +21,6 @@ const EthxCatDetail = () => {
       <NFTTitle title="NFT Marketplace" />
 
       <section className="flex">
-        <div className="market-bg-x market-bg-xl" />
         <div className="w-default px-[30px]">
           <DetailBack linkTo="/assets" />
 
@@ -54,7 +53,6 @@ const EthxCatDetail = () => {
             <SaleHistory />
           </div>
         </div>
-        <div className="market-bg-x market-bg-xr" />
       </section>
 
       {isTransfer && (
