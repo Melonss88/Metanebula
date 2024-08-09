@@ -26,6 +26,9 @@
     background-size: 8px;
   }
 }
+.tab-border {
+  border-bottom: 1px solid #dddddd;
+}
 
 // 作为公共的颜色，details里面还要用
 .Rarity1 {
@@ -66,6 +69,8 @@
   justify-content: center;
   width: 100%;
   gap: 30px 20px;
+  overflow-y: scroll;
+  max-height: 600px;
   .item {
     width: 280px;
     border-radius: 20px;

@@ -56,7 +56,7 @@ const Balanceof = () => {
   // }, [balanceData, decimalsData, isBalanceError, isDecimalsError]);
 
   return (
-    <section className="balanceof-container flex justify-center big:mt-[1rem] big:mb-[3rem] mt-[23px] mb-[14px]">
+    <section className="balanceof-container flex justify-center mt-[15px]">
       <ul className="balanceof-ul big:float-right flex">
         <li>
           <span>

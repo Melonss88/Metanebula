@@ -14,13 +14,7 @@ const SaleHistory = () => {
       <div className="item-cont">
         <div className="titl">0X82264daA...670A5237</div>
         <div className="titl">0X82264daA...670A5237</div>
-        <div className="titl">0.02</div>
-        <div className="titl">3/15/2024</div>
-      </div>
-      <div className="item-cont">
-        <div className="titl">0X82264daA...670A5237</div>
-        <div className="titl">0X82264daA...670A5237</div>
-        <div className="titl">0.02</div>
+        <div className="titl text-black font-[ftnB]">0.02</div>
         <div className="titl">3/15/2024</div>
       </div>
     </div>

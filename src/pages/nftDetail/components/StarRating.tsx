@@ -41,7 +41,7 @@ const StarRating = ({ rarity }: { rarity: rarityType }) => {
   }
 
   return (
-    <div>
+    <div className="pt-[5px]">
       {stars.map((star, index) => (
         <span key={index} className="star-icon">
           {star}

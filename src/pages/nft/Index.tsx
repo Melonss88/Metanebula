@@ -1,13 +1,11 @@
 import "./index.scss";
 import NFT from "./NFT";
 import { observer } from "mobx-react";
-import NFTTitle from "./components/NFTTitle";
 
 const nftAssetsIndex = () => {
   return (
     <div className="to-top nft-market-container">
-      <NFTTitle title="NFT Marketplace" />
-      <section className="flex items-start">
+      <section className="flex items-start mt-[40px]">
         <div className="w-default">
           <NFT />
         </div>

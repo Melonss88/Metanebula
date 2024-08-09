@@ -29,10 +29,14 @@ const Mint = () => {
     }
     try {
       writeContract({
-        address: "0x8438Ad1C834623CfF278AB6829a248E37C2D7E3f",
+        address: "0xbdEd0D2bf404bdcBa897a74E6657f1f12e5C6fb6",
         abi: DUCK,
         functionName: "safeMint",
-        args: [address, "testMint"]
+        args: [
+          address,
+          "testMint"
+          // "https://harlequin-obliged-nightingale-746.mypinata.cloud/ipfs/QmcoHmfgFxnP2QdFNWjj3JdUxihjxUGULMtgb7WXPbeuvU/config00.json"
+        ]
       });
     } catch (error) {
       notification.error({
