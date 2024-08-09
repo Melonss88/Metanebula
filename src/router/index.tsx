@@ -8,6 +8,8 @@ const NFTDetail = lazy(() => import("@/pages/nftDetail/EthxCatDetail"));
 const MyAssets = lazy(() => import("@/pages/assets/Index"));
 const AssetsDetail = lazy(() => import("@/pages/assetsDetail/AssetsDetail"));
 const Mint = lazy(() => import("@/pages/mint/Index"));
+const AboutUs = lazy(() => import("@/pages/aboutUs/AboutUs"));
+const MNBIntro = lazy(() => import("@/pages/mnb/MNBIntro"));
 
 function RootRoute(): JSX.Element {
   const { address } = useAccount();
@@ -27,6 +29,8 @@ function RootRoute(): JSX.Element {
         <Route path="/assets" element={<MyAssets />} />
         <Route path="/assets/detail" element={<AssetsDetail />} />
         <Route path="/mint" element={<Mint />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/mnb" element={<MNBIntro />} />
       </Routes>
     </>
   );

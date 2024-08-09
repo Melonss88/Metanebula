@@ -13,7 +13,8 @@ const stores = {
 };
 function App() {
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const noFooterArr = ["/mint", "/nft/detail", "/assets/detail"];
+  const isNoFooter = noFooterArr.indexOf(location.pathname) > -1;
 
   return (
     <Provider {...stores}>
@@ -22,7 +23,7 @@ function App() {
           <div>
             <Header />
             <RootRoute />
-            {isHomePage && <Footer />}
+            {!isNoFooter && <Footer />}
           </div>
         </WagmiProvider>
       </QueryClientProvider>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../fixed/images/logo-footer.png";
 
 const logoPart = {
@@ -7,19 +8,23 @@ const logoPart = {
 const footerConfig = [
   {
     title: "NFT",
-    cont: ["Collections", "Lastest Sale", "News"]
+    cont: ["Collections", "Lastest Sale", "News"],
+    link: ["/", "/", "/"]
   },
   {
     title: "Community",
-    cont: ["Twitter", "Telegram"]
+    cont: ["Twitter", "Telegram"],
+    link: ["https://x.com/chydmelon", "https://t.me/guaguaai"]
   },
   {
     title: "About",
-    cont: ["About Melonebula", "What's $MNB", "Documentations"]
+    cont: ["About Us", "What's $MNB"],
+    link: ["/about", "/mnb"]
   },
   {
     title: "Contract Me",
-    cont: ["chydmelon@gmail.com", "214A0350 池玉冬"]
+    cont: ["chydmelon@gmail.com", "214A0350 池玉冬"],
+    link: ["/", "/"]
   }
 ];
 
@@ -36,7 +41,9 @@ const Footer = () => {
             <li key={index} className="flex-1 min-w-[128px]">
               <p className="font-[ftnB]">{item.title}</p>
               {item.cont.map((item2, index2) => (
-                <p key={"cont" + index2}>{item2}</p>
+                <p key={"cont" + index2}>
+                  <Link to={item.link[index2]}>{item2}</Link>
+                </p>
               ))}
             </li>
           ))}

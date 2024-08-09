@@ -12,7 +12,7 @@ const Popular = () => {
         <Title title="Popular NFTs" />
         <Link
           to="/nft"
-          className="text-[28px] font-[ftn45] text-black cursor-pointer hover:text-[#4ab3fd]"
+          className="text-[28px] font-[ftn45] text-black cursor-pointer "
         >
           View All {">>"}
         </Link>
