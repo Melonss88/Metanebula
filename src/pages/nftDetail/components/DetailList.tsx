@@ -6,7 +6,6 @@ import { useSearchParams } from "react-router-dom";
 import DetailBack from "@/pages/nft/components/DetailBack";
 import ETHSvg from "@/assets/svg/ETHSvg";
 import { useState } from "react";
-import PopDetail from "@/pages/nftDetail/pop/PopDetail";
 import PopDetails from "@/pages/assetsDetail/pop/PopDetails";
 
 const DetailList = ({ back }: { back: string }) => {

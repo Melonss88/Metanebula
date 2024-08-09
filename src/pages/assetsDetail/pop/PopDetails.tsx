@@ -12,7 +12,6 @@ const PopDetails = ({
   data,
   type
 }: {
-  id: string | null;
   onClose: () => void;
   data: nftItemType | null;
   type: string;
