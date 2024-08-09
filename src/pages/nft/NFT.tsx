@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import ETHxCAT from "./section/Index";
+import NFTInner from "./section/Index";
 
 type nftHeaderListType = "Duck";
 export interface NftHeaderProviderType {
@@ -29,7 +29,7 @@ const NFT = () => {
     <nftHedaerContext.Provider
       value={{ nftTab, setNftTab, showFilter, setShowFilter }}
     >
-      {nftTab === "Duck" && <ETHxCAT></ETHxCAT>}
+      {nftTab === "Duck" && <NFTInner />}
     </nftHedaerContext.Provider>
   );
 };

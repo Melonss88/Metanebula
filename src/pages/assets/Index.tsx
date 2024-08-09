@@ -6,7 +6,7 @@ import AssetsItems from "./section/AssetsItems";
 
 const myAssetsIndex = () => {
   return (
-    <div className="to-top bg-xcats assets-container">
+    <div className="to-top assets-container">
       <NFTTitle title="My Assets" />
       <section className="flex items-start">
         <div className="w-default">

@@ -1,7 +1,7 @@
 import StarRating from "@/pages/nftDetail/components/StarRating";
 import { useNftDetail } from "@/pages/nftDetail/hooks/useNftDetail";
 import { accountFormat } from "@/utils/web3utils";
-import { EthxCatItemType } from "@/pages/nft/section/type";
+import { nftItemType } from "@/pages/nft/section/type";
 import { useSearchParams } from "react-router-dom";
 
 const DetailList = () => {
@@ -11,7 +11,7 @@ const DetailList = () => {
   const { records, isLoading, isError } = id
     ? useNftDetail(id)
     : {
-        records: null as EthxCatItemType | null,
+        records: null as nftItemType | null,
         isLoading: false,
         isError: false
       };

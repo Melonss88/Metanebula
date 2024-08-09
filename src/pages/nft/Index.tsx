@@ -5,7 +5,7 @@ import NFTTitle from "./components/NFTTitle";
 
 const nftAssetsIndex = () => {
   return (
-    <div className="to-top bg-xcats nft-market-container">
+    <div className="to-top nft-market-container">
       <NFTTitle title="NFT Marketplace" />
       <section className="flex items-start">
         <div className="w-default">

@@ -9,7 +9,7 @@ import SaleHistory from "./SaleHistory";
 import PopTransfer from "../assets/pop/PopTransfer";
 import DetailList from "@/pages/nftDetail/components/DetailList";
 
-const EthxCatDetail = () => {
+const assetsDetail = () => {
   const [tab, setTab] = useState(0);
   const tabList = ["All History"];
   const [searchParams] = useSearchParams();
@@ -17,7 +17,7 @@ const EthxCatDetail = () => {
   const [isTransfer, setIsTransfer] = useState(false);
 
   return (
-    <section className="to-top bg-xcats">
+    <section className="to-top">
       <NFTTitle title="NFT Marketplace" />
 
       <section className="flex">
@@ -62,4 +62,4 @@ const EthxCatDetail = () => {
   );
 };
 
-export default EthxCatDetail;
+export default assetsDetail;

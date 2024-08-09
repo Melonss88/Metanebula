@@ -14,7 +14,7 @@ export type ValueType =
   | AccessoriesType
   | PriceType;
 
-export interface ETHxCATProviderType {
+export interface nftProviderType {
   name: NameType;
   gender: GenderType;
   rarity: RarityType;
@@ -28,7 +28,7 @@ export interface ETHxCATProviderType {
   setRarity: React.Dispatch<React.SetStateAction<RarityType>>;
 }
 
-export type EthxCatItemType = AssetsItemType & {
+export type nftItemType = AssetsItemType & {
   price: string;
   latestSale: string;
   accessories: string;

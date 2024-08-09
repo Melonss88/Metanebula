@@ -4,7 +4,7 @@ import { useAccount } from "wagmi";
 
 const Home = lazy(() => import("@/pages/home/Index"));
 const NFT = lazy(() => import("@/pages/nft/Index"));
-const NFTDetail = lazy(() => import("@/pages/nftDetail/EthxCatDetail"));
+const NFTDetail = lazy(() => import("@/pages/nftDetail/nftDetail"));
 const MyAssets = lazy(() => import("@/pages/assets/Index"));
 const AssetsDetail = lazy(() => import("@/pages/assetsDetail/AssetsDetail"));
 const Mint = lazy(() => import("@/pages/mint/Index"));

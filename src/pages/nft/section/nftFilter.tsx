@@ -1,15 +1,15 @@
 import mobileStore from "@/stores/mobileStore";
 import { observer } from "mobx-react";
-import { useEthxCat } from "./EthxCatContext";
+import { useNFT } from "./nftContext";
 import { CloseOutlined } from "@ant-design/icons";
 import { Drawer } from "antd";
 import CommonEachFilter from "../components/CommonEachFilter";
 import PriceMinMax from "../components/PriceMinMax";
 import { useFilterConfig } from "../hooks/useFilterConfig";
 
-const EthxCatFilter = () => {
+const nftFilter = () => {
   const { name, setName, minValue, maxValue, setMaxValue, setMinValue } =
-    useEthxCat();
+    useNFT();
 
   const { records } = useFilterConfig();
   console.log("records", records);
@@ -65,4 +65,4 @@ const EthxCatFilter = () => {
   );
 };
 
-export default observer(EthxCatFilter);
+export default observer(nftFilter);

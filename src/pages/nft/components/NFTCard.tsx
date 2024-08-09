@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { useNavigate } from "react-router";
-import { EthxCatItemType } from "@/pages/nft/section/type";
+import { nftItemType } from "@/pages/nft/section/type";
 import { AssetsItemType } from "@/pages/assets/section/type";
 import StarRating from "@/pages/nftDetail/components/StarRating";
 
@@ -8,7 +8,7 @@ const NFTCard = ({
   items,
   type
 }: {
-  items: EthxCatItemType[] | AssetsItemType[];
+  items: nftItemType[] | AssetsItemType[];
   type: string;
 }) => {
   const navigate = useNavigate();

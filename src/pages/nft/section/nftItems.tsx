@@ -1,10 +1,10 @@
 import NFTCard from "@/pages/nft/components/NFTCard";
-import { EthxCatItemType } from "@/pages/nft/section/type";
+import { nftItemType } from "@/pages/nft/section/type";
 import { useMintRecords } from "@/pages/assets/hooks/useMintRecords";
 
-const EthxCatItems = () => {
+const nftItems = () => {
   const { records } = useMintRecords();
-  const AssetsCards: EthxCatItemType[] = records;
+  const AssetsCards: nftItemType[] = records;
 
   return (
     <div className="nft-info flex-1 ml-[2rem]">
@@ -43,4 +43,4 @@ const EthxCatItems = () => {
   );
 };
 
-export default EthxCatItems;
+export default nftItems;

@@ -4,7 +4,7 @@ import Countdown from "./components/Countdown";
 
 const Mint = () => {
   return (
-    <div className="bg-xcats to-top">
+    <div className="to-top">
       <div className="flex big:justify-between small:flex-col w-default big:py-[200px]">
         <img
           src={mintMain}

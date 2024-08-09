@@ -1,21 +1,21 @@
-import { rarityType, nameType } from "./type";
-import { EthxCatContext } from "./EthxCatContext";
+import { RarityType, NameType } from "./type";
+import { nftContext } from "./nftContext";
 import { useState } from "react";
-import EthxCatFilter from "./EthxCatFilter";
+import NFTFilter from "./nftFilter";
 import NftHeader from "../components/NftHeader";
-import EthxCatItems from "./EthxCatItems";
+import NFTItems from "./nftItems";
 import { useDebounce } from "use-debounce";
 
-const ETHxCAT = () => {
-  const [rarity, setRarity] = useState<rarityType>("All");
-  const [name, setName] = useState<nameType>("All");
+const NFT = () => {
+  const [rarity, setRarity] = useState<RarityType>("All");
+  const [name, setName] = useState<NameType>("All");
   const [minValue, setMinValue] = useState<string>("");
   const [maxValue, setMaxValue] = useState<string>("");
   const [debouncedMinValue] = useDebounce(minValue, 1000);
   const [debouncedMaxValue] = useDebounce(maxValue, 1000);
 
   return (
-    <EthxCatContext.Provider
+    <nftContext.Provider
       value={{
         name,
         setName,
@@ -30,11 +30,11 @@ const ETHxCAT = () => {
       <section className="nftMarket flex">
         <div className="w-[29rem]">
           <NftHeader />
-          <EthxCatFilter />
+          <NFTFilter />
         </div>
-        <EthxCatItems />
+        <NFTItems />
       </section>
-    </EthxCatContext.Provider>
+    </nftContext.Provider>
   );
 };
-export default ETHxCAT;
+export default NFT;
