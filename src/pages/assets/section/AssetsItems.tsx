@@ -18,8 +18,7 @@ const AssetsItems = () => {
 
   return (
     <section className="assets-cards big:clear-both">
-      <div className="nft-info flex">
-        {mobileStore.isMobile && <NFTTag />}
+      <div className="nft-info text-[20px] text-[#121212] font-[ftn55]">
         <div className="num">{filteredList.length.toLocaleString()} Ducks</div>
       </div>
       {records.length <= 0 && <Nodata />}

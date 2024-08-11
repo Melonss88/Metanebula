@@ -33,7 +33,7 @@ const PopDetails = ({
     try {
       console.log("address:", address);
       writeContract({
-        address: "0x057ef64E23666F000b34aE31332854aCBd1c8544",
+        address: "0x0116686E2291dbd5e317F47faDBFb43B599786Ef",
         abi: DUCK,
         functionName: "nftTransfer",
         args: [myaddress, address, data?.tokenId]

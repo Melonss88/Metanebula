@@ -1,9 +1,9 @@
-import no_data from "./img/no_data.webp";
+import no_data from "./img/no-data.svg";
 const Nodata = () => {
   return (
-    <div className="text-center w-full h-full py-[80px]">
+    <div className="text-center w-full h-full py-[80px] text-[#95d0f9] font-[ftnB]">
       <img src={no_data} alt="no_data.png" />
-      <p className="text-[25px] text-white">No data yet~</p>
+      <p className="text-[25px] mt-[20px]">No data yet~</p>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import NFTCard from "@/pages/nft/components/NFTCard";
 import { nftItemType } from "@/pages/nft/section/type";
 import { useMintRecords } from "@/pages/assets/hooks/useMintRecords";
+import Nodata from "@/pages/components/Nodata";
 
 const nftItems = () => {
   const { records } = useMintRecords();
@@ -38,7 +39,8 @@ const nftItems = () => {
         <li>Duck</li>
       </ul>
 
-      <NFTCard items={AssetsCards} type="nft" />
+      {records.length <= 0 && <Nodata />}
+      {records.length > 0 && <NFTCard items={AssetsCards} type="nft" />}
     </div>
   );
 };
