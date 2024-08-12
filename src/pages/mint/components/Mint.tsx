@@ -4,6 +4,8 @@ import DUCK from "@/config/abi/DUCK.json";
 import { useAccount, useWriteContract } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 
+const contractAddr = import.meta.env.VITE_API_CONTRACT_ADDR;
+
 const Mint = () => {
   const { address } = useAccount();
   const { open } = useWeb3Modal();
@@ -29,13 +31,12 @@ const Mint = () => {
     }
     try {
       writeContract({
-        address: "0x0116686E2291dbd5e317F47faDBFb43B599786Ef",
+        address: contractAddr,
         abi: DUCK,
         functionName: "safeMint",
         args: [
           address,
-          // "testMint"
-          "https://harlequin-obliged-nightingale-746.mypinata.cloud/ipfs/QmcoHmfgFxnP2QdFNWjj3JdUxihjxUGULMtgb7WXPbeuvU/config02.json"
+          "https://harlequin-obliged-nightingale-746.mypinata.cloud/ipfs/QmcoHmfgFxnP2QdFNWjj3JdUxihjxUGULMtgb7WXPbeuvU/config01.json"
         ]
       });
     } catch (error) {

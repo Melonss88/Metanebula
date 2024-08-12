@@ -23,7 +23,10 @@ const Balanceof = () => {
 
   useEffect(() => {
     if (ethBalanceData && !isEthBalanceError) {
-      const formattedBalance = ethers.utils.formatUnits(
+      const formatUnits = ethers.hasOwnProperty("formatUnits")
+        ? ethers.formatUnits
+        : ethers.utils.formatUnits;
+      const formattedBalance = formatUnits(
         String(ethBalanceData?.value),
         ethBalanceData?.decimals
       );

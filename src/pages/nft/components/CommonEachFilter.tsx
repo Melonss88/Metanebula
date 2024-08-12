@@ -1,5 +1,4 @@
 import React from "react";
-import { ValueType } from "../section/type";
 import CheckboxItem from "./CheckboxItem";
 import classNames from "classnames";
 
@@ -10,7 +9,7 @@ type EachFilterInterface<T> = {
   setValue: React.Dispatch<React.SetStateAction<T>>;
 };
 
-const CommonEachFilter = <T extends ValueType>({
+const CommonEachFilter = <T extends string>({
   filterArray,
   title,
   setValue,

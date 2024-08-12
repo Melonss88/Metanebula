@@ -8,24 +8,69 @@ import PriceMinMax from "../components/PriceMinMax";
 import { useFilterConfig } from "../hooks/useFilterConfig";
 
 const nftFilter = () => {
-  const { name, setName, minValue, maxValue, setMaxValue, setMinValue } =
-    useNFT();
+  const {
+    name,
+    setName,
+    gender,
+    setGender,
+    rarity,
+    setRarity,
+    color,
+    setColor,
+    accessories,
+    setAccessories,
+    minValue,
+    maxValue,
+    setMaxValue,
+    setMinValue
+  } = useNFT();
 
   const { records } = useFilterConfig();
-  console.log("records", records);
+  console.log("records:", records);
+  console.log("name:", name);
 
   const RepeatDiv = () => {
     return (
       <>
-        {records.map((item, index) => (
-          <CommonEachFilter
-            key={index}
-            filterArray={item.items}
-            title={item.name}
-            value={name}
-            setValue={setName}
-          />
-        ))}
+        {records.map((item, index) => {
+          let currentValue;
+          let setValue;
+
+          switch (item.name) {
+            case "name":
+              currentValue = name;
+              setValue = setName;
+              break;
+            case "gender":
+              currentValue = gender;
+              setValue = setGender;
+              break;
+            case "rarity":
+              currentValue = rarity;
+              setValue = setRarity;
+              break;
+            case "color":
+              currentValue = color;
+              setValue = setColor;
+              break;
+            case "accessories":
+              currentValue = accessories;
+              setValue = setAccessories;
+              break;
+            default:
+              return null;
+          }
+
+          return (
+            <CommonEachFilter
+              key={index}
+              filterArray={item.items}
+              title={item.name}
+              value={currentValue}
+              setValue={setValue}
+            />
+          );
+        })}
       </>
     );
   };

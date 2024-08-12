@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { useSearchParams } from "react-router-dom";
 import SaleHistory from "./SaleHistory";
 import DetailList from "@/pages/nftDetail/components/DetailList";
+import Offers from "./Offers";
 
 const nftDetail = () => {
   const [tab, setTab] = useState(1);
@@ -34,7 +35,7 @@ const nftDetail = () => {
             ))}
           </ol>
           <div className="">
-            {tab == 0 && <>offers order</>}
+            {tab == 0 && <Offers />}
             {tab == 1 && <SaleHistory />}
           </div>
         </div>

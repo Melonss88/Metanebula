@@ -1,8 +1,16 @@
 import { axiosInstance } from "@/utils/axiosInstance";
 import { useState, useEffect } from "react";
 
+type transferType = {
+  tokenId: number;
+  from: string;
+  to: string;
+  timestamp: string;
+  price: string;
+};
+
 export const useTransferRecords = () => {
-  const [records, setRecords] = useState([]);
+  const [records, setRecords] = useState<transferType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 

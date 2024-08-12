@@ -1,11 +1,16 @@
 import NFTCard from "@/pages/nft/components/NFTCard";
-import { nftItemType } from "@/pages/nft/section/type";
 import { useMintRecords } from "@/pages/assets/hooks/useMintRecords";
 import Nodata from "@/pages/components/Nodata";
+import { useEffect } from "react";
+import { useNFT } from "./nftContext";
 
 const nftItems = () => {
+  const { mintRecords, setMintRecords } = useNFT() || {};
   const { records } = useMintRecords();
-  const AssetsCards: nftItemType[] = records;
+
+  useEffect(() => {
+    setMintRecords(records);
+  }, [records]);
 
   return (
     <div className="nft-info flex-1 ml-[2rem]">
@@ -31,7 +36,7 @@ const nftItems = () => {
           All Results For Duck
         </p>
         <div className="text-[20px] text-[#121212] font-[ftn55]">
-          {AssetsCards.length.toLocaleString()} Ducks
+          {mintRecords.length.toLocaleString()} Ducks
         </div>
       </section>
 
@@ -40,7 +45,7 @@ const nftItems = () => {
       </ul>
 
       {records.length <= 0 && <Nodata />}
-      {records.length > 0 && <NFTCard items={AssetsCards} type="nft" />}
+      {records.length > 0 && <NFTCard items={mintRecords} type="nft" />}
     </div>
   );
 };

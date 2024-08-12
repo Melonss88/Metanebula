@@ -1,6 +1,8 @@
 import { createContext, useContext } from "react";
-import { nftProviderType } from "./type";
-export const nftContext = createContext<nftProviderType | undefined>(undefined);
+import { FilterContextType } from "./type";
+export const nftContext = createContext<FilterContextType | undefined>(
+  undefined
+);
 export const useNFT = () => {
   const context = useContext(nftContext);
   if (!context) {

@@ -1,9 +1,9 @@
 import ETHSvg from "@/assets/svg/ETHSvg";
 import { useTransferRecords } from "@/pages/assets/hooks/useTransferRecords";
 import { accountFormat } from "@/utils/web3utils";
-import { formatTimestamp } from "@/utils/formatDate";
+import { formatTimestampSimple } from "@/utils/formatDate";
 
-const SaleHistory = () => {
+const Offers = () => {
   const { records } = useTransferRecords();
   const list = records;
 
@@ -18,6 +18,7 @@ const SaleHistory = () => {
           <ETHSvg />
         </div>
         <div className="titl">Date</div>
+        <div className="titl">Status</div>
       </div>
       {list.map(
         (item, index) =>
@@ -27,7 +28,10 @@ const SaleHistory = () => {
               <div className="titl">{accountFormat(item.to)}</div>
               <div className="titl">{accountFormat(item.from)}</div>
               <div className="titl font-[ftnB]">{item.price}</div>
-              <div className="titl">{formatTimestamp(item.timestamp)}</div>
+              <div className="titl">
+                {formatTimestampSimple(item.timestamp)}
+              </div>
+              <div className="titl text-[#07db95]">Success</div>
             </div>
           )
       )}
@@ -35,4 +39,4 @@ const SaleHistory = () => {
   );
 };
 
-export default SaleHistory;
+export default Offers;

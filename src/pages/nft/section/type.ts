@@ -1,32 +1,6 @@
 import { AssetsItemType } from "@/pages/assets/section/type";
-export type NameType = "All" | "Duck";
-export type GenderType = "All" | "Male" | "Female";
-export type RarityType = "All" | "1" | "2" | "3" | "4" | "5";
-export type ColorType = "All" | "Green" | "Blue" | "Purple" | "Golden" | "Red";
-export type AccessoriesType = "All" | "Yes" | "No";
-export type PriceType = "";
 
-export type ValueType =
-  | NameType
-  | GenderType
-  | RarityType
-  | ColorType
-  | AccessoriesType
-  | PriceType;
-
-export interface nftProviderType {
-  name: NameType;
-  gender: GenderType;
-  rarity: RarityType;
-  color: ColorType;
-  accessories: AccessoriesType;
-  minValue: string;
-  maxValue: string;
-  setMinValue: React.Dispatch<React.SetStateAction<string>>;
-  setMaxValue: React.Dispatch<React.SetStateAction<string>>;
-  setName: React.Dispatch<React.SetStateAction<NameType>>;
-  setRarity: React.Dispatch<React.SetStateAction<RarityType>>;
-}
+export type ValueType = string;
 
 export type nftItemType = AssetsItemType & {
   price: string;
@@ -35,3 +9,22 @@ export type nftItemType = AssetsItemType & {
   color: string;
   gender: string;
 };
+
+export interface FilterContextType {
+  mintRecords: nftItemType[];
+  setMintRecords: React.Dispatch<React.SetStateAction<nftItemType[]>>;
+  name: ValueType;
+  setName: React.Dispatch<React.SetStateAction<ValueType>>;
+  gender: ValueType;
+  setGender: React.Dispatch<React.SetStateAction<ValueType>>;
+  rarity: ValueType;
+  setRarity: React.Dispatch<React.SetStateAction<ValueType>>;
+  color: ValueType;
+  setColor: React.Dispatch<React.SetStateAction<ValueType>>;
+  accessories: ValueType;
+  setAccessories: React.Dispatch<React.SetStateAction<ValueType>>;
+  minValue: string;
+  setMinValue: React.Dispatch<React.SetStateAction<string>>;
+  maxValue: string;
+  setMaxValue: React.Dispatch<React.SetStateAction<string>>;
+}

@@ -136,7 +136,7 @@ const Countdown: React.FC<CountdownProps> = ({ waitTime, duration }) => {
               PER-SALE PRICE
             </div>
             <div className="text-[#3B7DFE] leading-[40px] text-[40px] small:text-[22px]">
-              0.2 GO
+              0.0001 GO
             </div>
           </div>
           <div className="mt-[24px]">
