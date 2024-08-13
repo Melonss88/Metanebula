@@ -69,7 +69,7 @@ const MNBIntro = () => {
           </div>
 
           <div className="feature-item mb-4">
-            <h3 className="font-semibold">4. Unique Duck-Themed NFTs</h3>
+            <h3 className="font-semibold">4. Unique Themed NFTs</h3>
             <p className="">
               MetaNebula is home to a series of unique, duck-themed NFTs,
               specially crafted by our platform developers. These NFTs not only

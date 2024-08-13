@@ -36,7 +36,7 @@ const Mint = () => {
         functionName: "safeMint",
         args: [
           address,
-          "https://harlequin-obliged-nightingale-746.mypinata.cloud/ipfs/QmcoHmfgFxnP2QdFNWjj3JdUxihjxUGULMtgb7WXPbeuvU/config01.json"
+          "https://harlequin-obliged-nightingale-746.mypinata.cloud/ipfs/QmX49CDyXZbLAFwdfQbmuEMpPU9FsxGBFjt1P8FTP4D2MF/configAll.json"
         ]
       });
     } catch (error) {

@@ -1,6 +1,14 @@
 import { AssetsItemType } from "@/pages/assets/section/type";
 
 export type ValueType = string;
+type filterDataType = {
+  name?: string;
+  accessories?: string;
+  color?: string;
+  gender?: string;
+  price?: string;
+  rarity?: string;
+};
 
 export type nftItemType = AssetsItemType & {
   price: string;
@@ -8,6 +16,8 @@ export type nftItemType = AssetsItemType & {
   accessories: string;
   color: string;
   gender: string;
+  rarity: string;
+  filterData: filterDataType;
 };
 
 export interface FilterContextType {
@@ -27,4 +37,6 @@ export interface FilterContextType {
   setMinValue: React.Dispatch<React.SetStateAction<string>>;
   maxValue: string;
   setMaxValue: React.Dispatch<React.SetStateAction<string>>;
+  filterData: filterDataType;
+  setFilterData: React.Dispatch<React.SetStateAction<filterDataType>>;
 }

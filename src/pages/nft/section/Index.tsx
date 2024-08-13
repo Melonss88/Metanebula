@@ -12,8 +12,9 @@ const NFT = () => {
   const [rarity, setRarity] = useState<ValueType>("All");
   const [color, setColor] = useState<ValueType>("All");
   const [accessories, setAccessories] = useState<ValueType>("All");
-  const [minValue, setMinValue] = useState<string>("");
-  const [maxValue, setMaxValue] = useState<string>("");
+  const [minValue, setMinValue] = useState<string>(" ");
+  const [maxValue, setMaxValue] = useState<string>(" ");
+  const [filterData, setFilterData] = useState<object>({});
 
   return (
     <nftContext.Provider
@@ -33,7 +34,9 @@ const NFT = () => {
         minValue,
         setMinValue,
         maxValue,
-        setMaxValue
+        setMaxValue,
+        filterData,
+        setFilterData
       }}
     >
       <section className="nftMarket flex">

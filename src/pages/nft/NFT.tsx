@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import NFTInner from "./section/Index";
 
-type nftHeaderListType = "Duck";
+type nftHeaderListType = "Ducklon";
 export interface NftHeaderProviderType {
   showFilter: boolean;
   nftTab: nftHeaderListType;
@@ -20,16 +20,16 @@ export const useNftHeaderContext = () => {
   return context;
 };
 
-export const list: nftHeaderListType[] = ["Duck"];
+export const list: nftHeaderListType[] = ["Ducklon"];
 
 const NFT = () => {
   const [showFilter, setShowFilter] = useState(false);
-  const [nftTab, setNftTab] = useState<nftHeaderListType>("Duck");
+  const [nftTab, setNftTab] = useState<nftHeaderListType>("Ducklon");
   return (
     <nftHedaerContext.Provider
       value={{ nftTab, setNftTab, showFilter, setShowFilter }}
     >
-      {nftTab === "Duck" && <NFTInner />}
+      {nftTab === "Ducklon" && <NFTInner />}
     </nftHedaerContext.Provider>
   );
 };

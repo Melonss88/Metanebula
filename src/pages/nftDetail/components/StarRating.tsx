@@ -1,6 +1,4 @@
-import { rarityType } from "@/pages/assets/section/type";
-
-const StarRating = ({ rarity }: { rarity: rarityType }) => {
+const StarRating = ({ rarity }: { rarity: string }) => {
   const filledStarSvg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +39,7 @@ const StarRating = ({ rarity }: { rarity: rarityType }) => {
   }
 
   return (
-    <div className="pt-[5px]">
+    <div className="">
       {stars.map((star, index) => (
         <span key={index} className="star-icon">
           {star}

@@ -1,16 +1,10 @@
 import NFTCard from "@/pages/nft/components/NFTCard";
-import { useMintRecords } from "@/pages/assets/hooks/useMintRecords";
 import Nodata from "@/pages/components/Nodata";
-import { useEffect } from "react";
 import { useNFT } from "./nftContext";
 
 const nftItems = () => {
-  const { mintRecords, setMintRecords } = useNFT() || {};
-  const { records } = useMintRecords();
-
-  useEffect(() => {
-    setMintRecords(records);
-  }, [records]);
+  const { mintRecords, filterData } = useNFT() || {};
+  const name = filterData?.name == "all" ? "NFTs" : filterData?.name;
 
   return (
     <div className="nft-info flex-1 ml-[2rem]">
@@ -32,20 +26,20 @@ const nftItems = () => {
       </section>
 
       <section className="flex justify-between mb-[25px]">
-        <p className="text-[#0c0c0c] font-[ftnB] text-[2rem]">
-          All Results For Duck
+        <p className="text-[#0c0c0c] font-[ftnB] text-[2rem] capitalize">
+          All Results For {name}
         </p>
-        <div className="text-[20px] text-[#121212] font-[ftn55]">
-          {mintRecords.length.toLocaleString()} Ducks
+        <div className="text-[20px] text-[#121212] font-[ftn55] capitalize">
+          {mintRecords.length.toLocaleString()} {name}
         </div>
       </section>
 
-      <ul className="nft-filtered-info">
-        <li>Duck</li>
+      <ul className="nft-filtered-info capitalize">
+        <li>{name}</li>
       </ul>
 
-      {records.length <= 0 && <Nodata />}
-      {records.length > 0 && <NFTCard items={mintRecords} type="nft" />}
+      {mintRecords.length <= 0 && <Nodata />}
+      {mintRecords.length > 0 && <NFTCard items={mintRecords} type="nft" />}
     </div>
   );
 };

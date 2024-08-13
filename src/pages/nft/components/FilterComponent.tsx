@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Radio, RadioChangeEvent } from "antd";
 
 type RecordItem = {
@@ -11,22 +11,21 @@ type FilterComponentProps = {
   onFilterChange: (filters: { [key: string]: string }) => void;
 };
 
-const FilterComponent: React.FC<FilterComponentProps> = ({
-  records,
-  onFilterChange
-}) => {
-  // 初始化选中的 filters 为默认的 'All' 状态
-  const initialFilters = records.reduce(
-    (acc, record) => ({
-      ...acc,
-      [record.name]: "All" // 默认所有过滤器为 'All'
-    }),
-    {}
-  );
-
+const FilterComponent = ({ records, onFilterChange }: FilterComponentProps) => {
   const [selectedFilters, setSelectedFilters] = useState<{
     [key: string]: string;
-  }>(initialFilters);
+  }>({});
+
+  useEffect(() => {
+    const initialFilters = records.reduce(
+      (acc, record) => ({
+        ...acc,
+        [record.name]: "all"
+      }),
+      {}
+    );
+    setSelectedFilters(initialFilters);
+  }, [records]);
 
   useEffect(() => {
     onFilterChange(selectedFilters);
@@ -38,10 +37,13 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
   };
 
   return (
-    <div className="filter-container">
+    <div className="condition-item">
       {records.map((record) => (
         <div key={record.name} className="filter-group">
-          <div className="filter-title">{record.name}</div>
+          <div className="lab text-[24px] font-[ftn45] capitalize text-[#0d0d0d]">
+            {record.name}
+          </div>
+          <p className="bar-breakup"></p>
           <Radio.Group
             onChange={(e: RadioChangeEvent) =>
               handleFilterChange(record.name, e.target.value)
@@ -49,7 +51,11 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
             value={selectedFilters[record.name]}
           >
             {record.items.map((item) => (
-              <Radio key={item} value={item}>
+              <Radio
+                key={item}
+                value={item}
+                className="capitalize text-[#0c0c0c] text-[20px] mr-[20px] mb-[10px] font-[ftn35]"
+              >
                 {item}
               </Radio>
             ))}

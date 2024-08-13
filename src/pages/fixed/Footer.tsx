@@ -8,8 +8,8 @@ const logoPart = {
 const footerConfig = [
   {
     title: "NFT",
-    cont: ["Collections", "Lastest Sale", "News"],
-    link: ["/", "/", "/"]
+    cont: ["Introduction", "News", "Whitepapers"],
+    link: ["/nft/intro", "/", "/whitepapers"]
   },
   {
     title: "Community",

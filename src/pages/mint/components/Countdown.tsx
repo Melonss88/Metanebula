@@ -98,7 +98,7 @@ const Countdown: React.FC<CountdownProps> = ({ waitTime, duration }) => {
   }
 
   return (
-    <div className="text-right small:text-center">
+    <div className="text-right small:text-center font-[ftnB]">
       <div className="text-[44px] small:text-[22px] small:text-center text-nowrap">
         {mintText}
       </div>

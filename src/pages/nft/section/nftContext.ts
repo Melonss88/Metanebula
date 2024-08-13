@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { FilterContextType } from "./type";
+import { FilterContextType } from "@/pages/nft/section/type";
 export const nftContext = createContext<FilterContextType | undefined>(
   undefined
 );

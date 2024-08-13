@@ -30,7 +30,7 @@ const DetailList = ({ back }: { back: string }) => {
       </div>
       <div className="cont-right">
         <DetailBack linkTo={"/" + back} />
-        <div className="text-[4rem] font-[ftnB] mb-[25px]">
+        <div className="text-[4rem] font-[ftnB] mb-[25px] capitalize">
           {records?.name} #{id}
         </div>
 
@@ -49,8 +49,8 @@ const DetailList = ({ back }: { back: string }) => {
           </li>
           <li className="item">
             <div className="label">Rarity</div>
-            <div className="num text-[#5e5e5e] text-[16px]">
-              <StarRating rarity={records?.rarity} />
+            <div className="num text-[#5e5e5e] text-[16px] pt-[5px]">
+              <StarRating rarity={records?.rarity as string} />
             </div>
           </li>
           <li className="item">

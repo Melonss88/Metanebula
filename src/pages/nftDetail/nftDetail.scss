@@ -1,5 +1,5 @@
 .details-common {
-  padding-top: 40px;
+  padding-top: 50px;
   @media screen and (max-width: 970px) {
     padding-top: 20px;
   }
@@ -142,58 +142,6 @@
   @media screen and (max-width: 970px) {
     .Menu {
       font-size: 1.4rem;
-    }
-  }
-}
-.Details-FAMILYTREE {
-  width: 100%;
-  min-height: 26.2rem;
-  .item1,
-  .item2 {
-    display: flex;
-    margin: 3rem 0;
-    .tit {
-      font-size: 2.6rem;
-      min-width: 16%;
-      align-items: center;
-      display: grid;
-    }
-    .cont {
-      display: flex;
-      .ite {
-        margin-right: 5rem;
-        text-align: center;
-        .img {
-          width: 7.5rem;
-          height: 7.5rem;
-          border-radius: 8px;
-        }
-        .lab {
-          font-size: 2rem;
-          color: #fff;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 970px) {
-    .item1,
-    .item2 {
-      .tit {
-        font-size: 1.7rem;
-        min-width: 30%;
-      }
-      .cont {
-        .ite {
-          margin-right: 10px;
-          .img {
-            width: 4.8rem;
-            height: 4.8rem;
-          }
-          .lab {
-            font-size: 1.3rem;
-          }
-        }
-      }
     }
   }
 }

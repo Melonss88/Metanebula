@@ -31,8 +31,8 @@ const NFTCard = ({
                 `bg-Rarity${eachItem.rarity}`
               )}
             >
-              <div className="flex justify-between pl-[8px] small:pl-[4px] items-end leading-[4.5em]">
-                <span className="text-[24px] font-[ftnB] small:text-[1rem]">
+              <div className="flex justify-between small:pl-[4px] items-end leading-[4.5em]">
+                <span className="text-[24px] font-[ftnB] small:text-[1rem] capitalize">
                   <span className="text-[18px]">
                     {eachItem.gender == "male" && (
                       <svg
@@ -65,13 +65,13 @@ const NFTCard = ({
                   </span>
                   {eachItem.name} #{Number(eachItem.tokenId)}
                 </span>
-                <span className="text-[16px]">
+                <span className="text-[15px]">
                   <StarRating rarity={eachItem.rarity} />
                 </span>
               </div>
               {type == "nft" && (
                 <>
-                  <p className="flex items-baseline text-[18px] px-[5px] big:px-[15px] font-bold">
+                  <p className="flex items-baseline text-[18px] px-[2px] font-bold">
                     <span className="text-[22px] small:text-[12px] font-[ftn45]">
                       {eachItem.price} ETH
                     </span>
