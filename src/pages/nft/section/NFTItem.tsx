@@ -4,7 +4,7 @@ import { useNFT } from "./nftContext";
 
 const nftItems = () => {
   const { mintRecords, filterData } = useNFT() || {};
-  const name = filterData?.name == "all" ? "NFTs" : filterData?.name;
+  const name = filterData?.name == "all" ? "NFT" : filterData?.name;
 
   return (
     <div className="nft-info flex-1 ml-[2rem]">
@@ -30,7 +30,7 @@ const nftItems = () => {
           All Results For {name}
         </p>
         <div className="text-[20px] text-[#121212] font-[ftn55] capitalize">
-          {mintRecords.length.toLocaleString()} {name}
+          {mintRecords.length.toLocaleString()} {name}s
         </div>
       </section>
 
