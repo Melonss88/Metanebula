@@ -24,7 +24,7 @@ const Offers = () => {
         (item, index) =>
           Number(item.price) > 0 && (
             <div className="item-cont" key={index}>
-              <div className="titl">{item.tokenId}</div>
+              <div className="titl">#{item.tokenId}</div>
               <div className="titl">{accountFormat(item.to)}</div>
               <div className="titl">{accountFormat(item.from)}</div>
               <div className="titl font-[ftnB]">{item.price}</div>

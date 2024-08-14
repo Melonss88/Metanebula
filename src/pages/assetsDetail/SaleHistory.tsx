@@ -2,7 +2,7 @@ import { accountFormat } from "@/utils/web3utils";
 import { useTransferRecords } from "@/pages/assets/hooks/useTransferRecords";
 import { formatTimestamp } from "@/utils/formatDate";
 
-const SaleHistory = () => {
+const SaleHistory = ({ id }: { id: string | null }) => {
   const { records } = useTransferRecords();
   const list = records;
 
@@ -16,9 +16,10 @@ const SaleHistory = () => {
       </div>
       {list.map(
         (item, index) =>
-          Number(item.price) == 0 && (
+          Number(item.price) == 0 &&
+          Number(id) == item.tokenId && (
             <div className="item-cont" key={index}>
-              <div className="titl">{item.tokenId}</div>
+              <div className="titl">#{item.tokenId}</div>
               <div className="titl">{accountFormat(item.from)}</div>
               <div className="titl">{accountFormat(item.to)}</div>
               <div className="titl">{formatTimestamp(item.timestamp)}</div>

@@ -1,12 +1,13 @@
 import { AssetsItemType } from "@/pages/assets/section/type";
 
 export type ValueType = string;
+
 type filterDataType = {
   name?: string;
   accessories?: string;
   color?: string;
   gender?: string;
-  price?: string;
+  price?: string[];
   rarity?: string;
 };
 

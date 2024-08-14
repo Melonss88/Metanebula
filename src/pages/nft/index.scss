@@ -178,10 +178,12 @@
       width: 110px;
       height: 40px;
       font-size: 20px;
-      color: #676767;
+      color: #333;
+      font-family: ftnB;
       text-align: center;
       &::placeholder {
         color: #676767;
+        font-family: ftn35;
       }
       &:focus {
         outline: none;

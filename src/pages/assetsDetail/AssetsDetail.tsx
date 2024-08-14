@@ -8,7 +8,7 @@ import DetailList from "@/pages/nftDetail/components/DetailList";
 
 const assetsDetail = () => {
   const [tab, setTab] = useState(0);
-  const tabList = ["All History"];
+  const tabList = ["History"];
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
 
@@ -34,7 +34,7 @@ const assetsDetail = () => {
             ))}
           </ol>
           <div className="]">
-            <SaleHistory />
+            <SaleHistory id={id} />
           </div>
         </div>
       </div>

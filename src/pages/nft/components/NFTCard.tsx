@@ -31,7 +31,7 @@ const NFTCard = ({
                 `bg-Rarity${eachItem.rarity}`
               )}
             >
-              <div className="flex justify-between small:pl-[4px] items-end leading-[4.5em]">
+              <div className="flex justify-between small:pl-[4px] items-end leading-[4em]">
                 <span className="text-[24px] font-[ftnB] small:text-[1rem] capitalize">
                   <span className="text-[18px]">
                     {eachItem.gender == "male" && (

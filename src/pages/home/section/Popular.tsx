@@ -21,8 +21,9 @@ const Popular = () => {
         {records.map((item, index) => (
           <PopularCard
             key={index}
-            id={item.id}
             name={item.name}
+            id={item.id}
+            website={item.website}
             price={item.price}
           />
         ))}

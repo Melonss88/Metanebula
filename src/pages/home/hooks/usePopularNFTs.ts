@@ -4,6 +4,7 @@ type NFTItem = {
   id: string;
   name: string;
   price: string;
+  website: string;
 };
 
 export const usePopularNFTs = () => {

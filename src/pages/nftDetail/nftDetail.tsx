@@ -8,8 +8,9 @@ import DetailList from "@/pages/nftDetail/components/DetailList";
 import Offers from "./Offers";
 
 const nftDetail = () => {
-  const [tab, setTab] = useState(1);
-  const tabList = ["Offers", "History"];
+  const [tab, setTab] = useState(0);
+  // const tabList = ["Offers", "History"];
+  const tabList = ["Offers"];
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
 
@@ -35,8 +36,8 @@ const nftDetail = () => {
             ))}
           </ol>
           <div className="">
-            {tab == 0 && <Offers />}
-            {tab == 1 && <SaleHistory />}
+            {/* {tab == 0 && <Offers />} */}
+            {tab == 0 && <SaleHistory id={id} />}
           </div>
         </div>
       </div>

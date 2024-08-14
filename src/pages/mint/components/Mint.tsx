@@ -73,25 +73,20 @@ const Mint = () => {
   }, [failureReason]);
 
   return (
-    // <Layout>
-
-    <div
+    <button
       onClick={() => {
         isPending ? null : mint();
       }}
     >
-      {!isPending ? (
-        <div>MINT NOW</div>
-      ) : (
+      {!isPending && "Mint Now"}
+      {isPending && (
         <Spin
           className="w-[200px] text-center"
           spinning={isPending}
           tip=""
         ></Spin>
       )}
-    </div>
-
-    // </Layout>
+    </button>
   );
 };
 

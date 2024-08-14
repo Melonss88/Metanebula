@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, FocusEvent, useState } from "react";
 
 type priceMinMaxType = {
   minValue: string;
@@ -13,43 +13,34 @@ const PriceMinMax = ({
   setMinValue,
   setMaxValue
 }: priceMinMaxType) => {
-  const handleMinChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const [tempMinValue, setTempMinValue] = useState(minValue);
+  const [tempMaxValue, setTempMaxValue] = useState(maxValue);
+
+  const handleValueChange = (
+    event: ChangeEvent<HTMLInputElement>,
+    setter: React.Dispatch<React.SetStateAction<string>>,
+    tempSetter: React.Dispatch<React.SetStateAction<string>>
+  ) => {
     let value = event.target.value;
-    // 只允许输入0-10000之间的整数，不允许输入小数点
-    value = value.replace(/\D/g, ""); // 移除非数字字符
+    value = value
+      .replace(/[^0-9.]/g, "")
+      .replace(/(?!^)(^0+)(\d)/, "$2")
+      .replace(/(\.\d*?)\./g, "$1");
 
-    value = value.replace(/^0+(\d)/, "$1");
-
-    // 处理空值，默认设置为0
-    if (value === "") value = "0";
-
-    // 转换为整数
-    const numValue = parseInt(value, 10);
-    if (numValue > 100000) value = "100000";
-    setMinValue(value);
-
-    if (parseInt(maxValue, 10) < numValue) {
-      setMaxValue(value);
-    }
+    tempSetter(value);
   };
-  const handleMaxChange = (event: ChangeEvent<HTMLInputElement>) => {
-    let value = event.target.value;
-    // 只允许输入0-10000之间的整数，不允许输入小数点
-    value = value.replace(/\D/g, ""); // 移除非数字字符
 
-    value = value.replace(/^0+(\d)/, "$1");
+  const handleBlur = (
+    event: FocusEvent<HTMLInputElement>,
+    setter: React.Dispatch<React.SetStateAction<string>>,
+    otherValue: string,
+    updateOther: React.Dispatch<React.SetStateAction<string>>
+  ) => {
+    const value = event.target.value;
+    setter(value);
 
-    // 处理空值，默认设置为0
-    if (value === "") value = "0";
-
-    // 转换为整数
-    const numValue = parseInt(value, 10);
-    if (numValue > 100000) value = "100000";
-    setMaxValue(value);
-
-    // 确保 max 大于等于当前的 min
-    if (parseInt(minValue, 10) > numValue) {
-      setMinValue(value);
+    if (parseFloat(otherValue) > parseFloat(value)) {
+      updateOther(value);
     }
   };
 
@@ -59,17 +50,27 @@ const PriceMinMax = ({
       <p className="bar-breakup"></p>
       <div className="flex items-center">
         <input
-          type="number"
+          type="text"
           placeholder="Min"
-          value={minValue}
-          onChange={handleMinChange}
+          value={tempMinValue}
+          onChange={(event) =>
+            handleValueChange(event, setMinValue, setTempMinValue)
+          }
+          onBlur={(event) =>
+            handleBlur(event, setMinValue, maxValue, setMaxValue)
+          }
         />
         <span className="line"></span>
         <input
-          type="number"
+          type="text"
           placeholder="Max"
-          value={maxValue}
-          onChange={handleMaxChange}
+          value={tempMaxValue}
+          onChange={(event) =>
+            handleValueChange(event, setMaxValue, setTempMaxValue)
+          }
+          onBlur={(event) =>
+            handleBlur(event, setMaxValue, minValue, setMinValue)
+          }
         />
       </div>
     </div>

@@ -98,67 +98,55 @@ const Countdown: React.FC<CountdownProps> = ({ waitTime, duration }) => {
   }
 
   return (
-    <div className="text-right small:text-center font-[ftnB]">
-      <div className="text-[44px] small:text-[22px] small:text-center text-nowrap">
-        {mintText}
-      </div>
+    <div className="text-center text-[#b2b2b2] mint-content">
+      <div className="text-[28px] text-nowrap font-[ftn55]">{mintText}</div>
       {/* 倒计时那块 */}
       <div className="countdown">
         <div
           className={`timer flex justify-end small:justify-center ${
             timeLeft.phase === "active"
-              ? "text-[#01FF2B]"
+              ? "text-[#fff]"
               : timeLeft.phase === "waiting"
-              ? " text-[#4ab3fd]"
-              : " text-[#9C9C9C]"
+              ? " text-[#fff]"
+              : " text-[#fff]"
           }`}
         >
           <p className="unit">
             <span className="num">{timeLeft.days}:</span>
-            <span className="txt">DAYS</span>
+            <span className="txt">Days</span>
           </p>
           <p className="unit">
             <span className="num">{timeLeft.hours}:</span>
-            <span className="txt">HRS</span>
+            <span className="txt">Hrs</span>
           </p>
           <p className="unit">
             <span className="num">{timeLeft.minutes}:</span>
-            <span className="txt">MINS</span>
+            <span className="txt">Mins</span>
           </p>
           <p className="unit">
             <span className="num">{timeLeft.seconds}</span>
-            <span className="txt">SECS</span>
+            <span className="txt">Secs</span>
           </p>
         </div>
-        <div className="small:flex small:items-center small:justify-center">
-          <div className="mt-[24px] small:mr-[20px]">
-            <div className=" text-[32px]  small:text-nowrap  small:text-[18px]">
-              PER-SALE PRICE
-            </div>
-            <div className="text-[#3B7DFE] leading-[40px] text-[40px] small:text-[22px]">
-              0.0001 GO
-            </div>
-          </div>
-          <div className="mt-[24px]">
-            <div className="text-[32px] small:text-[18px]">REMAINING</div>
-            <div className="text-[#3B7DFE] leading-[40px] text-[40px] small:text-[22px]">
-              {remaining}
-            </div>
-          </div>
+      </div>
+      <div className="small:flex small:items-center small:justify-center">
+        <div className="list-info small:mr-[20px]">
+          <div className="txt">Pre-Sale Price</div>
+          <div className="num">0.0001 ETH</div>
         </div>
-        <div className="mt-[24px] flex justify-end  small:flex-col small:items-center small:justify-center items-end w-full">
-          <div
-            className={`small:pt-[4px]  ${
-              timeLeft.phase !== "active"
-                ? "bg-[linear-gradient(90deg,#707070_0%,#4E4E4E_100%)] cursor-not-allowed"
-                : " cursor-pointer btn-theme-blue"
-            } ml-[30px] small:ml-0 w-[260px] h-[60px]  text-[30px] small:h-[50px] small:text-[20px] flex  items-center  justify-center rounded-[30px]  `}
-          >
-            {timeLeft.phase === "waiting" && "MINT"}
-            {timeLeft.phase === "active" && <Mint></Mint>}
-            {timeLeft.phase === "finished" && "MINT END"}
-          </div>
+        <div className="list-info">
+          <div className="txt">Remaining</div>
+          <div className="num">{remaining}</div>
         </div>
+      </div>
+      <div className="btn-box">
+        {timeLeft.phase === "waiting" && (
+          <button className="disabled">Mint</button>
+        )}
+        {timeLeft.phase === "active" && <Mint></Mint>}
+        {timeLeft.phase === "finished" && (
+          <button className="disabled">Mint End</button>
+        )}
       </div>
     </div>
   );
