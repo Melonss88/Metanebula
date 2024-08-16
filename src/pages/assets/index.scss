@@ -1,47 +1,26 @@
 @import url(@/assets/commonCss/common.nft.scss);
+
 .userinfo-container {
-  text-align: center;
-  padding: 25px 10px;
-  @media screen and (max-width: 970px) {
-    height: auto;
-    margin-bottom: 54px;
-    padding: 25px 10px 0 10px;
+  .avatar-mine {
+    margin-top: 54px;
+    margin-bottom: -28px;
+    display: inline-block;
+    width: 164px;
+    height: 164px;
+    background-color: #000000;
+    border: solid 4px #27a0f8;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 168px;
+      height: 168px;
+    }
   }
 }
 
-// balanceof的css
-.balanceof-ul {
-  font-size: 24px;
-  li {
-    border-radius: 20px;
-    min-width: 400px;
-    height: 42px;
-    border: 1px solid #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 18px;
-    padding-left: 12px;
-    img {
-      height: 40px;
-      margin-right: 12px;
-    }
-  }
-  @media screen and (max-width: 970px) {
-    font-size: 13px;
-    li {
-      min-width: 14.6rem;
-      padding-left: 5px;
-      padding-right: 5px;
-      height: 23px;
-      img {
-        height: 22px;
-        width: 19px;
-        margin-right: 2px;
-      }
-    }
-  }
-}
 .address-container {
   margin-top: 20px;
   display: flex;

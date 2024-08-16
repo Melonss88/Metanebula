@@ -59,24 +59,23 @@ const Balanceof = () => {
   // }, [balanceData, decimalsData, isBalanceError, isDecimalsError]);
 
   return (
-    <section className="balanceof-container flex justify-center mt-[15px]">
-      <ul className="balanceof-ul big:float-right flex">
+    <section className="balanceof-container pb-[25px] mt-[6px]">
+      <ul className="balanceof-ul font-[ftnB] text-[36px]">
         <li>
-          <span>
+          <span className="text-[28px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
+              width="1em"
+              height="1em"
               viewBox="0 0 24 24"
-              className="h-[30px] small:w-[16px] small:h-[15px] align-sub"
             >
               <path
                 fill="currentColor"
                 d="M12 0L4.63 12.22L12 16.574l7.37-4.354zm0 24L4.63 13.617L12 18l7.37-4.383z"
               ></path>
             </svg>
-            {ethBalanceData?.symbol}
           </span>
+          <span> {ethBalanceData?.symbol}</span>
           <span className="ml-[2rem]">{balance || "--"}</span>
         </li>
       </ul>

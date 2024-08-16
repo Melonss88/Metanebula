@@ -19,9 +19,9 @@ const AssetsItems = () => {
   });
 
   return (
-    <section className="assets-cards">
-      <div className="nft-info text-[20px] text-[#121212] font-[ftn55] mb-[20px]">
-        <div className="num">{filteredList.length.toLocaleString()} Ducks</div>
+    <section className="assets-cards pt-[60px]">
+      <div className="nft-info text-[24px] text-[#0d0d0d] font-[ftnB] mb-[5px]">
+        <div className="num">{filteredList.length.toLocaleString()} NFTs</div>
       </div>
       {mintRecords.length <= 0 && <Nodata />}
       {mintRecords.length > 0 && <NFTCard items={filteredList} type="assets" />}

@@ -14,6 +14,7 @@ const myAssetsIndex = () => {
   const [accessories, setAccessories] = useState<ValueType>("All");
   const [minValue, setMinValue] = useState<string>("");
   const [maxValue, setMaxValue] = useState<string>("");
+  const [filterData, setFilterData] = useState<object>({});
 
   return (
     <nftContext.Provider
@@ -33,19 +34,16 @@ const myAssetsIndex = () => {
         minValue,
         setMinValue,
         maxValue,
-        setMaxValue
+        setMaxValue,
+        filterData,
+        setFilterData
       }}
     >
       <div className="to-top assets-container">
-        <section className="flex items-start">
-          <div className="w-default">
-            <div className="">
-              <UserInfo />
-              <p className="bar-breakup"></p>
-              <AssetsItems />
-            </div>
-          </div>
-        </section>
+        <UserInfo />
+        <div className="w-default">
+          <AssetsItems />
+        </div>
       </div>
     </nftContext.Provider>
   );
