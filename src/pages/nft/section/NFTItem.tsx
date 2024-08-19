@@ -30,7 +30,7 @@ const nftItems = () => {
           All Results For {name}
         </p>
         <div className="text-[20px] text-[#121212] font-[ftn55] capitalize">
-          {mintRecords.length.toLocaleString()} {name}s
+          {mintRecords.length.toLocaleString()} {name + "s"}
         </div>
       </section>
 
