@@ -7,6 +7,8 @@ import { useLocation } from "react-router-dom";
 import { WagmiProvider } from "wagmi";
 import { queryClient, wagmiConfig } from "./config/wagmi";
 import { QueryClientProvider } from "@tanstack/react-query";
+// import { Provider as ReduxProvider } from "react-redux";
+// import ReduxStore from '@/redux/store'
 
 const stores = {
   mobileStore
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <Provider {...stores}>
+      {/* <ReduxProvider store={ReduxStore}> */}
       <QueryClientProvider client={queryClient}>
         <WagmiProvider config={wagmiConfig}>
           <div>
@@ -28,6 +31,7 @@ function App() {
           </div>
         </WagmiProvider>
       </QueryClientProvider>
+      {/* </ReduxProvider> */}
     </Provider>
   );
 }

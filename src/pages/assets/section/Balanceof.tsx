@@ -7,9 +7,9 @@ import { parseAbi } from "viem";
 import { ethers } from "ethers";
 
 // ERC20 代币的合约 ABI
-const tokenABI = ARB;
+// const tokenABI = ARB;
 // Arbitrum合约地址
-const tokenAddress = "0x912CE59144191C1204E64559FE8253a0e49E6548";
+// const tokenAddress = "0x912CE59144191C1204E64559FE8253a0e49E6548";
 
 const Balanceof = () => {
   const { address } = useAccount();

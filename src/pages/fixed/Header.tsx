@@ -7,10 +7,29 @@ import mobileStore from "@/stores/mobileStore";
 import { useEffect, useState } from "react";
 import { observer } from "mobx-react";
 import User from "./components/User";
+// import { useSelector } from "react-redux";
+// import { commonSlice } from "@/redux/commonSlice";
+// import useCommonStateManager from "@/hooks/useCommonStateManager";
 
 const Header = () => {
   const [showList, setShowList] = useState(false);
   const [isDropdown, setIsDropdown] = useState(false);
+
+  // const isReduxMobile = useSelector(
+  //   (state:{commonStore:commonSlice}) => state.commonStore.isReduxMobile
+  // )
+  // const {changeIsReduxMobile} = useCommonStateManager()
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     console.log("?????---",window.innerWidth < 970)
+  //     changeIsReduxMobile(window.innerWidth < 970);
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  //   handleResize();
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
+  // console.log(isReduxMobile,'isReduxMobile')
+
 
   useEffect(() => {
     const updateMobileState = () => {

@@ -54,7 +54,7 @@ const PopDetails = ({
         abi: DUCK,
         functionName: "buy",
         args: [data?.tokenId],
-        value: BigInt(ethers.parseEther(String(data?.price)).toString())
+        value: BigInt(ethers.utils.parseEther(String(data?.price)).toString())
       });
     } catch (error) {
       console.log("error", error);

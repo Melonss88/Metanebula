@@ -16,7 +16,7 @@ export const useFilterConfig = () => {
         const response = await axiosInstance.get(`/filter/config`);
         setRecords(response.data);
       } catch (error) {
-        console.error("Error fetching banner config records:", error);
+        console.error("Error fetching filter config:", error);
         setIsError(true);
       } finally {
         setIsLoading(false);
