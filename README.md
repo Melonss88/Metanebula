@@ -6,6 +6,10 @@ gp of melon
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+# View the page
+
+https://melonss88.github.io/Metanebula/
+
 # Try it
 
 ```
