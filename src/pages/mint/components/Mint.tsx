@@ -37,7 +37,9 @@ const Mint = () => {
         args: [
           address,
           "https://harlequin-obliged-nightingale-746.mypinata.cloud/ipfs/QmP6J7Q6pAVosS72ZbrCuKmdSB38oF5iAY5XDAAtjEeJHD/configAll.json"
-        ]
+        ],
+        chain: undefined,
+        account: address //这里报错，所以加了这个，但是没有测试，可能是版本问题，之前ok的
       });
     } catch (error) {
       notification.error({

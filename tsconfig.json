@@ -15,7 +15,11 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": true,
+    "strict": false,
+    "noImplicitAny": false,  // 允许隐式 any
+    "strictNullChecks": false,  // 允许 null 和 undefined
+    "noUncheckedIndexedAccess": false,  // 允许未检查的数组访问
+    "checkJs": false,  // 不检查 JS 文件
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,

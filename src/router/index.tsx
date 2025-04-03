@@ -12,7 +12,6 @@ const AboutUs = lazy(() => import("@/pages/aboutUs/AboutUs"));
 const MNBIntro = lazy(() => import("@/pages/mnb/MNBIntro"));
 const NFTIntro = lazy(() => import("@/pages/nftIntro/NFTIntro"));
 const Whitepapers = lazy(() => import("@/pages/whitepapers/Whitepapers"));
-const TestPage = lazy(() => import("@/pages/test/Index"));
 
 function RootRoute(): JSX.Element {
   const { address } = useAccount();
@@ -40,7 +39,6 @@ function RootRoute(): JSX.Element {
         <Route path="/mnb" element={<MNBIntro />} />
         <Route path="/nft/intro" element={<NFTIntro />} />
         <Route path="/whitepapers" element={<Whitepapers />} />
-        <Route path="/testpage" element={<TestPage />} />
       </Routes>
     </>
   );

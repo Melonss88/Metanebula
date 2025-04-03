@@ -9,7 +9,7 @@ type RecordItem = {
 
 type FilterComponentProps = {
   records: RecordItem[];
-  onFilterChange: (filters: { [key: string]: string }) => void;
+  onFilterChange: (filters: { [key: string]: string[] }) => void; //string[]这是才改的类型，因为报错，没有验证
 };
 
 const FilterComponent = ({ records, onFilterChange }: FilterComponentProps) => {

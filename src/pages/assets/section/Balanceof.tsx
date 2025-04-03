@@ -23,17 +23,13 @@ const Balanceof = () => {
 
   useEffect(() => {
     if (ethBalanceData && !isEthBalanceError) {
-      const formatUnits = ethers.hasOwnProperty("formatUnits")
-        ? ethers.formatUnits
-        : ethers.utils.formatUnits;
-      const formattedBalance = formatUnits(
-        String(ethBalanceData?.value),
-        ethBalanceData?.decimals
-      );
+      // const formatUnits = ethers.hasOwnProperty("formatUnits") ? ethers.formatUnits : ethers.utils.formatUnits;
+      const formatUnits = ethers.utils.formatUnits //暂时改为这个，上面那个一直报错，版本问题不兼容
+      const formattedBalance = formatUnits(String(ethBalanceData?.value), ethBalanceData?.decimals);
       setBalance(formattedBalance);
     }
   }, [ethBalanceData, isEthBalanceError]);
-
+  
   // 使用 wagmi 提供的 useReadContract hook 获取 token 代币的余额
   // const { data: balanceData, isError: isBalanceError } = useReadContract({
   //   address: tokenAddress,

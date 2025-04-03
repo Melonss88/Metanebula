@@ -7,8 +7,10 @@ import { BrowserRouter } from "react-router-dom";
 import { Suspense } from "react";
 import Loading from "@/pages/components/Loading.tsx";
 
+const basename = import.meta.env.BASE_URL || "/Metanebula";  
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <BrowserRouter basename={basename}>
     <Suspense fallback={<Loading />}>
       <App />
     </Suspense>

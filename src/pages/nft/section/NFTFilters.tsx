@@ -9,7 +9,7 @@ const NFTFilters = () => {
   const { getMintRecordsFn } = useMintRecords();
   const { filterData, setFilterData } = useNFT();
 
-  const handleFilterChange = (filters: { [key: string]: string }) => {
+  const handleFilterChange = (filters: { [key: string]: string[] }) => {
     setFilterData(filters);
   };
 

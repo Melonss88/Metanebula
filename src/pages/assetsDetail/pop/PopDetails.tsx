@@ -37,7 +37,9 @@ const PopDetails = ({
         address: contractAddr,
         abi: DUCK,
         functionName: "nftTransfer",
-        args: [myaddress, address, data?.tokenId]
+        args: [myaddress, address, data?.tokenId],
+        chain: undefined,//这里报错，所以加了这个，但是没有测试，可能是版本问题，之前ok的
+        account: myaddress //这里报错，所以加了这个，但是没有测试，可能是版本问题，之前ok的
       });
     } catch {
       notification.error({
@@ -54,7 +56,9 @@ const PopDetails = ({
         abi: DUCK,
         functionName: "buy",
         args: [data?.tokenId],
-        value: BigInt(ethers.utils.parseEther(String(data?.price)).toString())
+        value: BigInt(ethers.utils.parseEther(String(data?.price)).toString()),
+        chain: undefined, //这里报错，所以加了这个，但是没有测试，可能是版本问题，之前ok的
+        account: myaddress //这里报错，所以加了这个，但是没有测试，可能是版本问题，之前ok的
       });
     } catch (error) {
       console.log("error", error);
