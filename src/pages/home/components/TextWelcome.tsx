@@ -1,7 +1,7 @@
 const TextWelcome = () => {
   return (
     <h1 className="home-welcome text-gradient">
-      Welcome to Melon's Graducation Project!
+      Welcome to MetaNebula!
     </h1>
   );
 };
